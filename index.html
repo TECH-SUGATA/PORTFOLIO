@@ -1,157 +1,325 @@
-   <!DOCTYPE html>
+<html class="dark" lang="en"><head></head><body class="selection:bg-primary/30">```html
 
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
+
+
+    <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Sugata Nayak | AI &amp; Full Stack Developer</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<title>Sugata Nayak | AI Engineer &amp; Full Stack Developer</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
-                    colors: {
-                        "primary": "#6366f1", // Indigo
-                        "secondary": "#a855f7", // Violet
-                        "tertiary": "#ec4899", // Pink
-                        "surface": "#0b1326",
-                        "on-surface": "#dae2fd",
-                        "on-surface-variant": "#c6c6c6",
+                    "colors": {
+                        "primary": "#BC13FE",
+                        "surface-variant": "#25252d",
+                        "inverse-surface": "#fcf8ff",
+                        "on-error": "#490006",
+                        "on-primary-container": "#330045",
+                        "secondary-fixed-dim": "#ceb9ff",
+                        "secondary": "#ac89ff",
+                        "surface": "rgba(14, 14, 19, 0.7)",
+                        "primary-container": "#BC13FE",
+                        "error-dim": "#d7383b",
+                        "surface-dim": "#0e0e13",
+                        "surface-container-low": "rgba(19, 19, 25, 0.6)",
+                        "background": "#0e0e13",
+                        "primary-fixed-dim": "#A020F0",
+                        "primary-fixed": "#BC13FE",
+                        "surface-container": "rgba(25, 25, 31, 0.8)",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#6d0061",
+                        "on-background": "#f9f5fd",
+                        "surface-container-high": "rgba(31, 31, 38, 0.85)",
+                        "on-tertiary-fixed": "#33002d",
+                        "on-surface-variant": "#acaab1",
+                        "on-primary-fixed-variant": "#6a008c",
+                        "outline-variant": "#48474d",
+                        "secondary-container": "#7000ff",
+                        "on-primary-fixed": "#2c003d",
+                        "on-secondary": "#290067",
+                        "surface-tint": "#BC13FE",
+                        "on-tertiary": "#42003a",
+                        "secondary-fixed": "#dac9ff",
+                        "on-tertiary-container": "#1b0017",
+                        "surface-bright": "#2c2b33",
+                        "tertiary-dim": "#ff59e3",
+                        "surface-container-lowest": "rgba(0, 0, 0, 0.6)",
+                        "on-secondary-fixed-variant": "#6300e2",
+                        "on-secondary-container": "#f8f1ff",
+                        "on-surface": "#f9f5fd",
+                        "primary-dim": "#A020F0",
+                        "on-secondary-fixed": "#41009a",
+                        "inverse-on-surface": "#55545b",
+                        "error": "#ff716c",
+                        "tertiary-container": "#ff05e5",
+                        "error-container": "#9f0519",
+                        "tertiary-fixed": "#ff85e4",
+                        "secondary-dim": "#874cff",
+                        "outline": "#76747b",
+                        "tertiary": "#ff59e3",
+                        "inverse-primary": "#6a008c",
+                        "surface-container-highest": "rgba(37, 37, 45, 0.9)",
+                        "on-error-container": "#ffa8a3"
                     },
-                    fontFamily: {
-                        "headline": ["Space Grotesk", "sans-serif"],
-                        "body": ["Inter", "sans-serif"],
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
                     },
-                    borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Space Grotesk"]
+                    }
                 },
             },
         }
     </script>
-<style>.material-symbols-outlined {
-    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
-    }
-.bg-fixed-neural {
-    background-image: linear-gradient(rgba(11, 19, 38, 0.85), rgba(11, 19, 38, 0.85)), url(https://lh3.googleusercontent.com/aida-public/AB6AXuBoPM61bDoS6OKSUbe8WuI7fj66oUrwUhyTVZzHEekelxUMBv74dOjswZRKWizlDfJM_wWWW2UVVVBUx732y4vpFUwAfV3RoGyKqz5_JnQR_G149wIUEqG_msYBFVJmnEZHDs-rO-L72UYZk_TNEMqwKStN7d5CiA8fY7PXkRzqztE7uJDvc3xwjmpSqV8zdeLzXV6qG10Cgb9HeVizht9F-iApDXOgDUe7pTgXaGI_92aqwZIotbOdchPtOo4Edxk6Opy9lH8OW7w);
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center
-    }
-.rainbow-gradient {
-    background: linear-gradient(to right, #6366f1, #a855f7, #ec4899)
-    }
-.rainbow-text {
-    background: linear-gradient(to right, #6366f1, #a855f7, #ec4899);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent
-    }
-.glass-card-deep {
-    background: rgba(23, 31, 51, 0.3);
-    backdrop-filter: blur(24px);
-    border: 1px solid rgba(168, 85, 247, 0.2)
-    }
-.glass-card-deep:hover {
-    box-shadow: 0 0 30px rgba(99, 102, 241, 0.3);
-    border-color: rgba(168, 85, 247, 0.5)
-    }
-.glow-button:hover {
-    box-shadow: 0 0 25px rgba(168, 85, 247, 0.5)
-    }
-.spectral-border-rainbow {
-    position: relative;
-    background: linear-gradient(to right, #6366f1, #a855f7, #ec4899);
-    padding: 2px
-    }
-.spectral-border-inner {
-    background: #0b1326;
-    height: 100%;
-    width: 100%
-    }</style>
-</head>
-<body class="bg-surface text-on-surface font-body selection:bg-primary/30 bg-fixed-neural">
-<!-- Top Navigation Bar -->
-<nav class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-2xl border-b border-white/10 shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
-<div class="flex justify-between items-center px-8 lg:px-12 h-20 w-full max-w-none">
-<div class="text-2xl font-black rainbow-text font-headline tracking-tight">
-            Sugata Nayak
-        </div>
-<div class="hidden md:flex items-center space-x-8 font-headline font-bold tracking-tight">
-<a class="text-primary border-b-2 border-primary pb-1 hover:text-white transition-all duration-300" href="#about">About</a>
-<a class="text-on-surface/70 hover:text-white hover:bg-white/5 px-2 py-1 rounded transition-all duration-300" href="#skills">Skills</a>
-<a class="text-on-surface/70 hover:text-white hover:bg-white/5 px-2 py-1 rounded transition-all duration-300" href="#projects">Projects</a>
-<a class="text-on-surface/70 hover:text-white hover:bg-white/5 px-2 py-1 rounded transition-all duration-300" href="#contact">Contact</a>
-<div class="h-6 w-px bg-white/10 mx-2"></div>
-<!-- Visual Only Theme Toggle -->
-<button class="p-2 rounded-full hover:bg-white/10 text-on-surface/70 hover:text-white transition-colors">
-<span class="material-symbols-outlined">palette</span>
-</button>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #050508;
+            color: #f9f5fd;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Enhanced Vibrant Animated Mesh Gradient Background */
+        .nebula-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background: 
+                radial-gradient(circle at 10% 20%, rgba(188, 19, 254, 0.25) 0%, transparent 45%),
+                radial-gradient(circle at 90% 10%, rgba(0, 210, 255, 0.2) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(255, 89, 227, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(172, 137, 255, 0.2) 0%, transparent 45%),
+                radial-gradient(circle at 20% 80%, rgba(0, 112, 255, 0.2) 0%, transparent 40%),
+                #050508;
+            animation: nebulaFlow 12s ease-in-out infinite alternate;
+        }
+
+        @keyframes nebulaFlow {
+            0% { transform: scale(1) translate(0, 0); }
+            33% { transform: scale(1.15) translate(-3%, 3%); }
+            66% { transform: scale(1.05) translate(2%, -2%); }
+            100% { transform: scale(1) translate(0, 0); }
+        }
+
+        /* Enhanced Floating Code Snippets with varied neon glows */
+        .code-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+            opacity: 0.25;
+            font-family: monospace;
+            font-size: 11px;
+            overflow: hidden;
+            user-select: none;
+        }
+
+        .code-snippet {
+            position: absolute;
+            white-space: pre;
+            animation: floatUp var(--duration) linear infinite;
+            top: 100%;
+            left: var(--left);
+            text-shadow: 0 0 8px var(--glow-color);
+            color: var(--text-color);
+        }
+
+        @keyframes floatUp {
+            from { transform: translateY(0); }
+            to { transform: translateY(-130vh); }
+        }
+
+        .space-grotesk { font-family: 'Space Grotesk', sans-serif; }
+        
+        .neural-pulse {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #BC13FE, #00d2ff, #ff59e3, transparent);
+            opacity: 0.4;
+            z-index: 100;
+            pointer-events: none;
+        }
+
+        .glass-card {
+            background: rgba(31, 31, 38, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(188, 19, 254, 0.15);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            border: 1px solid rgba(188, 19, 254, 0.4);
+            box-shadow: 0 0 25px rgba(188, 19, 254, 0.2);
+        }
+
+        .neon-glow-primary:hover {
+            box-shadow: 0 0 25px rgba(188, 19, 254, 0.4);
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #BC13FE, #ac89ff, #00d2ff, #ff59e3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .social-btn {
+            @apply flex items-center justify-center w-12 h-12 rounded-full bg-surface-container border border-white/10 transition-all duration-300;
+        }
+        .social-btn:hover {
+            @apply -translate-y-1 border-primary text-primary shadow-[0_0_15px_rgba(188,19,254,0.3)];
+        }
+
+        section { position: relative; z-index: 1; scroll-margin-top: 80px; }
+    </style>
+<div class="nebula-bg"></div>
+<div class="code-overlay">
+<!-- Enhanced Code Snippets with varied neon colors -->
+<div class="code-snippet" style="--left: 5%; --duration: 10s; --glow-color: #BC13FE; --text-color: #e280ff;">function animate() {<br/>  requestAnimationFrame(animate);<br/>  neuralNet.propagate();<br/>}</div>
+<div class="code-snippet" style="--left: 15%; --duration: 14s; --glow-color: #00d2ff; --text-color: #80e9ff;">const model = await tf.loadLayersModel('url');<br/>const prediction = model.predict(input);</div>
+<div class="code-snippet" style="--left: 30%; --duration: 18s; --glow-color: #ff59e3; --text-color: #ffb8f3;">01001000 01100101 01101100 01101100 01101111</div>
+<div class="code-snippet" style="--left: 50%; --duration: 12s; --glow-color: #BC13FE; --text-color: #e280ff;">&lt;section class="hero"&gt;<br/>  &lt;h1&gt;Sugata Nayak&lt;/h1&gt;<br/>&lt;/section&gt;</div>
+<div class="code-snippet" style="--left: 70%; --duration: 22s; --glow-color: #ac89ff; --text-color: #d6c4ff;">while(isLearning) {<br/>  improve(skill);<br/>  deploy(project);<br/>}</div>
+<div class="code-snippet" style="--left: 85%; --duration: 16s; --glow-color: #00d2ff; --text-color: #80e9ff;">SELECT * FROM neurons<br/>WHERE synapse_strength &gt; 0.95;</div>
+<div class="code-snippet" style="--left: 92%; --duration: 20s; --glow-color: #ff59e3; --text-color: #ffb8f3;">import torch<br/>x = torch.rand(5, 3)</div>
+<div class="code-snippet" style="--left: 40%; --duration: 25s; --glow-color: #BC13FE; --text-color: #e280ff;">optimizer = Adam(learning_rate=0.001)</div>
+<div class="code-snippet" style="--left: 60%; --duration: 30s; --glow-color: #00d2ff; --text-color: #80e9ff;">01110011 01110101 01100111 01100001 01110100 01100001</div>
+<div class="code-snippet" style="--left: 25%; --duration: 15s; --glow-color: #ff59e3; --text-color: #ffb8f3;">y = mx + b // Linear Reg</div>
+<div class="code-snippet" style="--left: 78%; --duration: 19s; --glow-color: #ac89ff; --text-color: #d6c4ff;">kubectl apply -f deployment.yaml</div>
 </div>
-<button class="rainbow-gradient glow-button text-white px-8 py-2.5 rounded-full font-bold hover:-translate-y-0.5 active:scale-95 transition-all duration-300">
-            Resume
-        </button>
+<div class="neural-pulse"></div>
+<!-- Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-[#0e0e13]/40 backdrop-blur-xl border-b border-[#BC13FE]/10 shadow-[0_8px_32px_0_rgba(188,19,254,0.05)] h-20">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-full">
+<div class="text-xl font-bold tracking-tighter text-[#BC13FE] font-['Space_Grotesk']">
+                Sugata Nayak
+            </div>
+<div class="hidden md:flex items-center space-x-8 font-['Space_Grotesk'] tracking-tight">
+<a class="text-white/70 hover:text-[#BC13FE] transition-colors" href="#projects">Projects</a>
+<a class="text-white/70 hover:text-[#BC13FE] transition-colors" href="#skills">Skills</a>
+<a class="text-white/70 hover:text-[#BC13FE] transition-colors" href="#experience">Experience</a>
+<a class="text-white/70 hover:text-[#BC13FE] transition-colors" href="#certifications">Certifications</a>
+<a class="text-white/70 hover:text-[#BC13FE] transition-colors" href="#blog">Blog</a>
+<a class="text-white/70 hover:text-[#BC13FE] transition-colors" href="#contact">Contact</a>
+</div>
+<a class="px-6 py-2 bg-[#BC13FE] text-white font-bold rounded-sm transition-all hover:scale-105 active:scale-95 shadow-[0_0_15px_rgba(188,19,254,0.3)]" href="https://i.ibb.co/5gKrdd9X/Sugata-Nayak-12024002035227-Resume.png">Resume</a>
 </div>
 </nav>
-<main class="pt-20">
+<main>
 <!-- Hero Section -->
-<section class="min-h-screen flex items-center px-12 lg:px-24 relative overflow-hidden">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center w-full max-w-7xl mx-auto">
-<div class="lg:col-span-7 space-y-8">
-<div class="inline-flex items-center px-4 py-2 rounded-full glass-card-deep border-primary/40 text-primary text-sm font-bold tracking-wider uppercase">
-                    Available for Opportunities
-                </div>
-<h1 class="text-6xl lg:text-8xl font-black font-headline tracking-tighter leading-none">
-                    Sugata <br/> <span class="rainbow-text">Nayak</span>
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden px-6 lg:px-12">
+<div class="absolute inset-0 z-0">
+<div class="absolute top-1/4 -right-1/4 w-[600px] h-[600px] bg-primary/15 blur-[120px] rounded-full animate-pulse"></div>
+<div class="absolute bottom-1/4 -left-1/4 w-[600px] h-[600px] bg-secondary/10 blur-[120px] rounded-full animate-pulse"></div>
+<div class="absolute top-1/2 left-1/3 w-[400px] h-[400px] bg-tertiary/10 blur-[100px] rounded-full"></div>
+</div>
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+<div class="space-y-8">
+<div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-surface-container-high border border-primary/30 backdrop-blur-md">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Available for Opportunities</span>
+</div>
+<h1 class="text-5xl lg:text-7xl font-headline font-bold leading-tight">
+                        Hi, I'm <span class="gradient-text">Sugata Nayak</span>
 </h1>
-<p class="text-2xl font-headline font-medium text-on-surface-variant max-w-2xl leading-relaxed">
-                    AI &amp; Full Stack Developer | B.Tech CSE (AI)
-                    <span class="block text-lg font-body mt-4 text-on-surface/60">Building intelligent solutions with AI, Web, and Cloud. Architecting the future of neural interfaces.</span>
-</p>
-<div class="flex flex-wrap gap-6 pt-4">
-<button class="rainbow-gradient glow-button text-white px-10 py-4 rounded-xl font-black tracking-wider shadow-lg hover:scale-105 transition-transform duration-300 uppercase text-sm">
-                        View Projects
-                    </button>
-<button class="glass-card-deep px-10 py-4 rounded-xl font-bold border border-white/10 hover:bg-white/5 transition-colors duration-300 text-sm uppercase tracking-wider">
-                        Contact Me
-                    </button>
+<div class="h-12 overflow-hidden text-2xl lg:text-3xl text-white font-headline">
+<p class="animate-[slide_6s_infinite]">Full Stack Developer</p>
+<p class="animate-[slide_10s_infinite_delay-1s]">AI & ML Enthusiast</p>
+<p class="animate-[slide_9s_infinite_delay-2s]">Python Programmer</p>
+<p class="animate-[slide_8s_infinite_delay-3s]">DSA Learner</p>
+</div>
+<p class="text-lg text-on-surface-variant max-w-lg leading-relaxed font-body">
+                       Full Stack Developer, Python Programmer,DSA Learner, Building the future with neural networks and clean code focused on creating impactful intelligent systems.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<a class="px-8 py-4 bg-primary text-white font-bold rounded-sm neon-glow-primary transition-all flex items-center gap-2" href="#projects">
+                            View Projects
+                            <span class="material-symbols-outlined text-sm">arrow_outward</span>
+</a>
+<a class="px-8 py-4 bg-transparent border border-outline-variant/50 text-on-surface font-bold rounded-sm hover:bg-surface-bright/20 backdrop-blur-sm transition-all" href="#contact">
+                            Contact Me
+                        </a>
+</div>
+<div class="flex items-center gap-6 pt-4">
+<a class="text-on-surface-variant hover:text-primary transition-all hover:scale-110" href="https://github.com/TECH-SUGATA">
+<span class="material-symbols-outlined text-3xl">code</span>
+</a>
+<a class="text-on-surface-variant hover:text-primary transition-all hover:scale-110" href="https://www.linkedin.com/in/sugata-nayak-343099322">
+<span class="material-symbols-outlined text-3xl">hub</span>
+</a>
 </div>
 </div>
-<div class="lg:col-span-5 flex justify-center lg:justify-end">
-<div class="relative w-80 h-80 lg:w-96 lg:h-96">
-<div class="absolute inset-0 rounded-xl rainbow-gradient animate-pulse blur-2xl opacity-40"></div>
-<div class="spectral-border-rainbow w-full h-full rounded-xl overflow-hidden shadow-2xl">
-<img alt="Sugata Nayak Profile" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAm4BJClU3wkTPQBDuysOHLq0bSl5mQ9U-MbnOTYkDiyNuukoWHnaGB10s-PHk-PCsAtvMNAO1iYtNuCdYs4kMAyITQX1FWEUjHppZvgEwBK-G2qEpSeqK5eHES-84v6obtpwctumBITdJt42BOfqBTk-sAFNwukQ9CxzILz8HhePjBLiYDyfIussDtEd8OWc8FecdD2PX4mBDmXIx6uso4p2MbmxyjLN8VI36CFn0MIC1W1QYFgUoLURbIzD9MrAx5E9j4yNqIZiI"/>
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-primary via-secondary to-tertiary rounded-lg blur opacity-30 group-hover:opacity-60 transition duration-1000 group-hover:duration-200"></div>
+<div class="relative aspect-square max-w-md mx-auto overflow-hidden rounded-lg bg-surface-container border border-primary/20 backdrop-blur-xl">
+<img alt="Sugata Nayak" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://i.ibb.co/wNYrcrqX/Screenshot-2026-04-04-052453.png"/>
+</div>
+<div class="absolute bottom-4 -left-4 glass-card p-4 rounded-lg hidden md:block">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">psychology</span>
+</div>
+<div>
+<p class="text-xs font-label uppercase text-on-surface-variant">Focus Area</p>
+<p class="text-sm font-bold text-white">Artificial Intelligence </p>
+</div>
 </div>
 </div>
 </div>
 </div>
 </section>
 <!-- About Section -->
-<section class="py-32 px-12 lg:px-24" id="about">
+<section class="py-24 px-6 bg-surface-container-low/40 backdrop-blur-md">
 <div class="max-w-7xl mx-auto">
-<div class="flex flex-col lg:flex-row gap-16 items-start">
-<div class="lg:w-1/3">
-<h2 class="text-5xl font-black font-headline tracking-tight mb-4">About <span class="rainbow-text">Me</span></h2>
-<div class="w-24 h-2 rainbow-gradient rounded-full"></div>
+<div class="flex flex-col md:flex-row gap-16">
+<div class="md:w-1/3">
+<h2 class="text-4xl font-headline font-bold sticky top-32">
+                            The <br/><span class="gradient-text">Curator's</span> <br/>Manifesto
+                        </h2>
 </div>
-<div class="lg:w-2/3 glass-card-deep p-12 rounded-xl">
-<p class="text-xl leading-relaxed text-on-surface/80 mb-8">
-                        A highly motivated B.Tech Computer Science student specializing in Artificial Intelligence. Passionate about creating seamless user experiences integrated with powerful backend logic and machine learning models. I focus on developing scalable web applications and intelligent systems that solve real-world problems.
-                    </p>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-<div class="flex items-center gap-4 bg-white/5 p-6 rounded-lg border border-white/10">
-<span class="material-symbols-outlined text-4xl text-tertiary">school</span>
+<div class="md:w-2/3 space-y-8">
+<p class="text-2xl leading-relaxed font-body text-on-surface-variant">
+                            I am a <span class="text-white font-semibold">🚀 B.Tech CSE (AI) Student  at Institute of Engineering & Management (IEM), Kolkata / (Full Stack Developer) </span>
+                               💡 Passionate about building AI-driven and scalable digital solutions that solve real-world problems and bridgethe gap betwwen human intuition with algorithmic precision. 
+                                🤖 AI & ML Enthusiast | 💻 Frontend Developer|🐍Python Programmer | 🧠 DSA | 🌐 Web Development | 🚀 Hackathon Participant | 📊 Data Analytics | 
+                                /Member of IETE students Forum (ISF) / Google Devloper Groups  (IEM)
+                        </p>
+<p class="text-lg leading-relaxed font-body text-on-surface-variant">
+                            Based in <span class="text-primary">Kolkata, India</span>, I spend my time exploring the architectures of tomorrow. My passion lies in Machine Learning and Full Stack development, where I focus on creating systems that aren't just functional, but emotionally aware and contextually intelligent.
+                        </p>
+<div class="grid grid-cols-2 gap-8 py-8 border-t border-white/10">
 <div>
-<p class="text-sm text-on-surface/50 font-medium">Academic Standing</p>
-<p class="text-2xl font-bold font-headline">CGPA 8.52</p>
+<h4 class="text-primary font-label uppercase tracking-widest text-sm mb-2">Philosophy</h4>
+<p class="text-on-surface-variant">Efficiency over complexity. AI as a tool for human empowerment.</p>
 </div>
-</div>
-<div class="flex items-center gap-4 bg-white/5 p-6 rounded-lg border border-white/10">
-<span class="material-symbols-outlined text-4xl text-secondary">code</span>
 <div>
-<p class="text-sm text-on-surface/50 font-medium">Core Focus</p>
-<p class="text-2xl font-bold font-headline">AI &amp; Full Stack</p>
-</div>
+<h4 class="text-secondary font-label uppercase tracking-widest text-sm mb-2">Mission</h4>
+<p class="text-on-surface-variant">Democratizing AI through accessible and scalable applications.</p>
 </div>
 </div>
 </div>
@@ -159,231 +327,440 @@
 </div>
 </section>
 <!-- Skills Section -->
-<section class="py-32 px-12 lg:px-24" id="skills">
+<section class="py-24 px-6" id="skills">
 <div class="max-w-7xl mx-auto">
-<h2 class="text-5xl font-black font-headline tracking-tight mb-20 text-center">Technical <span class="rainbow-text">Expertise</span></h2>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<h3 class="text-sm font-label uppercase tracking-[0.3em] text-primary mb-12 text-center">Tech Stack &amp; Armory</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
 <!-- Programming -->
-<div class="glass-card-deep p-8 rounded-xl transition-all duration-300">
-<h3 class="text-xl font-bold font-headline mb-6 flex items-center gap-2">
-<span class="material-symbols-outlined text-primary">terminal</span> Programming
-                    </h3>
-<div class="space-y-4">
-<div>
-<div class="flex justify-between mb-1 text-sm font-medium"><span>Python</span><span>90%</span></div>
-<div class="h-2 bg-white/10 rounded-full overflow-hidden">
-<div class="h-full w-[90%] rainbow-gradient"></div>
+<div class="glass-card p-8 rounded-sm group">
+<span class="material-symbols-outlined text-primary mb-6 text-4xl" data-weight="fill">terminal</span>
+<h4 class="font-headline font-bold text-lg mb-4 text-white">Programming</h4>
+<ul class="space-y-2 text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary"></span> Python</li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary"></span> Java</li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary"></span> C / SQL</li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary"></span> JavaScript</li>
+</ul>
 </div>
+<!-- Web -->
+<div class="glass-card p-8 rounded-sm group">
+<span class="material-symbols-outlined text-secondary mb-6 text-4xl" data-weight="fill">language</span>
+<h4 class="font-headline font-bold text-lg mb-4 text-white">Web Tech</h4>
+<ul class="space-y-2 text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-secondary"></span> HTML / CSS</li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-secondary"></span> React.js</li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-secondary"></span> Node.js</li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-secondary"></span> Tailwind</li>
+</ul>
 </div>
-<div class="flex flex-wrap gap-2 mt-4">
-<span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-medium">C</span>
-<span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-medium">Java</span>
-<span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-medium">SQL</span>
-<span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-medium">JavaScript</span>
+<!-- Tools -->
+<div class="glass-card p-8 rounded-sm group">
+<span class="material-symbols-outlined text-tertiary mb-6 text-4xl" data-weight="fill">construction</span>
+<h4 class="font-headline font-bold text-lg mb-4 text-white">Tools</h4>
+<ul class="space-y-2 text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-tertiary"></span> Git / GitHub</li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-tertiary"></span> VS Code</li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-tertiary"></span> Jupyter</li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-tertiary"></span> Docker</li>
+</ul>
 </div>
+<!-- Cloud -->
+<div class="glass-card p-8 rounded-sm group">
+<span class="material-symbols-outlined text-primary mb-6 text-4xl" data-weight="fill">cloud</span>
+<h4 class="font-headline font-bold text-lg mb-4 text-white">Cloud</h4>
+<ul class="space-y-2 text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary"></span> Google Cloud</li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary"></span> AWS Basics</li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary"></span> Firebase</li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary"></span> Vercel</li>
+</ul>
 </div>
-</div>
-<!-- Web Development -->
-<div class="glass-card-deep p-8 rounded-xl transition-all duration-300">
-<h3 class="text-xl font-bold font-headline mb-6 flex items-center gap-2">
-<span class="material-symbols-outlined text-secondary">web</span> Web Development
-                    </h3>
-<div class="space-y-4">
-<div>
-<div class="flex justify-between mb-1 text-sm font-medium"><span>Node.js</span><span>85%</span></div>
-<div class="h-2 bg-white/10 rounded-full overflow-hidden">
-<div class="h-full w-[85%] rainbow-gradient"></div>
-</div>
-</div>
-<div class="flex flex-wrap gap-2 mt-4">
-<span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-medium">HTML5</span>
-<span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-medium">CSS3</span>
-<span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-medium">React</span>
-<span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-medium">Tailwind</span>
-</div>
-</div>
-</div>
-<!-- Cloud & Tools -->
-<div class="glass-card-deep p-8 rounded-xl transition-all duration-300">
-<h3 class="text-xl font-bold font-headline mb-6 flex items-center gap-2">
-<span class="material-symbols-outlined text-tertiary">cloud</span> Infrastructure &amp; Tools
-                    </h3>
-<div class="space-y-6">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-sm text-tertiary">cloud_done</span>
-<span class="text-on-surface/80">Google Cloud Platform</span>
-</div>
-<div class="flex flex-wrap gap-2">
-<span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-medium">Git</span>
-<span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-medium">Jupyter</span>
-<span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-medium">VS Code</span>
-<span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-medium">MySQL</span>
-<span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-medium">MongoDB</span>
-</div>
-</div>
+<!-- Database -->
+<div class="glass-card p-8 rounded-sm group">
+<span class="material-symbols-outlined text-secondary mb-6 text-4xl" data-weight="fill">database</span>
+<h4 class="font-headline font-bold text-lg mb-4 text-white">Databases</h4>
+<ul class="space-y-2 text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-secondary"></span> MySQL</li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-secondary"></span> MongoDB</li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-secondary"></span> PostgreSQL</li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-secondary"></span> Redis</li>
+</ul>
 </div>
 </div>
 </div>
 </section>
-
 <!-- Projects Section -->
-<section class="py-32 px-6 lg:px-16" bg-surface-container-low" id="projects">
- <div class="max-w-6xl mx-auto">
-<div class="flex justify-between items-end mb-20">
+<section class="py-24 px-6 bg-surface-container-low/20 backdrop-blur-md" id="projects">
+<div class="max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-16">
 <div>
-<h2 class="text-5xl font-black font-headline tracking-tight mb-4">Featured <span class="text-primary">Projects</span></h2>
-<p class="text-on-surface/60 max-w-xl">A selection of technical implementations across machine learning, IoT, and full stack architecture.</p>
+<h3 class="text-sm font-label uppercase tracking-[0.3em] text-primary mb-4">Selected Works</h3>
+<h2 class="text-4xl font-headline font-bold text-white">Featured Engineering</h2>
 </div>
-<a class="text-primary font-bold hover:underline flex items-center gap-2" href="#">View all archive <span class="material-symbols-outlined">arrow_forward</span></a>
+<p class="text-on-surface-variant hidden md:block max-w-xs text-right">A collection of AI-driven solutions and technical experiments.</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Project 1 -->
+<div class="group relative bg-surface-container rounded-sm overflow-hidden glass-card flex flex-col h-full">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFJrX9EDUuB_-ORx2T2qosDJplL1VztYxOUIfidtIs_JuukFXYugmD4D7OcCx41RnxFgWxJmKJeQHquc8fouYjzsj27ixPY7JQ9HGEpnh6BflprCa0Utw5fYdne1drQLd7LFKA9JzMd8rzLSo9njcNT-xMbX-PKezebv2twZVO9Jha_YmrpVhV_BOV2CcHuk2JQNkEkOKvfiHIAfnyyaC9Wx2RWCeYBa_mPErDvLtleC-BGSO5sHqTut-BUNLqYnMneaDwu9HatHg"/>
+<div class="absolute top-4 right-4 bg-primary/20 backdrop-blur-md px-3 py-1 rounded-sm border border-primary/30">
+<span class="text-xs font-label text-primary font-bold uppercase">Computer Vision</span>
+</div>
+</div>
+<div class="p-8 space-y-4 flex flex-col flex-grow">
+<h4 class="text-2xl font-headline font-bold text-white">AI Plant Therapist</h4>
+<p class="text-on-surface-variant text-sm flex-grow">Deep learning model for detecting plant diseases with high precision through computer vision architectures.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-surface-bright/50 text-[10px] rounded-sm text-white">TensorFlow</span>
+<span class="px-2 py-1 bg-surface-bright/50 text-[10px] rounded-sm text-white">Keras</span>
+<span class="px-2 py-1 bg-surface-bright/50 text-[10px] rounded-sm text-white">Python</span>
+</div>
+<div class="pt-6">
+<a class="text-primary flex items-center gap-2 font-bold text-xs uppercase tracking-widest hover:gap-3 transition-all" href="https://github.com/TECH-SUGATA/AI-plant-Therapist-and-Health-monitoring-System?tab=readme-ov-file">
+                                    VIEW REPOSITORY <span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="group relative bg-surface-container rounded-sm overflow-hidden glass-card flex flex-col h-full">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrS69zRH194zavD3Z-OfkiVFyAuTQMCE849QD4-aW-uqkH4KMeqspgt9LDWx_4AfFWsxum8uxTqfff1MAwhea1LgnslrRMFHfdh5sLaBk7j2U1kv013u_hYWHUCIixiqEHZScLC_JQjMxrg7FSiIPPSO7hIH8ni9K7kCje1wt8cudevrOTDvit_ANFFTlhbu2l-aVBgmOhFanGkOJrJOFKTcSI7KU3JOAMHMqdlmaiWNsHgAyKWhLwxU4cMkTpymTDF1t2nt6Bodo"/>
+<div class="absolute top-4 right-4 bg-secondary/20 backdrop-blur-md px-3 py-1 rounded-sm border border-secondary/30">
+<span class="text-xs font-label text-secondary font-bold uppercase">Sentiment Analysis</span>
+</div>
+</div>
+<div class="p-8 space-y-4 flex flex-col flex-grow">
+<h4 class="text-2xl font-headline font-bold text-white">Emotionally Aware Machine</h4>
+<p class="text-on-surface-variant text-sm flex-grow">Real-time facial expression and speech sentiment analysis using advanced neural architectures and NLP.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-surface-bright/50 text-[10px] rounded-sm text-white">NLP</span>
+<span class="px-2 py-1 bg-surface-bright/50 text-[10px] rounded-sm text-white">OpenCV</span>
+<span class="px-2 py-1 bg-surface-bright/50 text-[10px] rounded-sm text-white">PyTorch</span>
+</div>
+<div class="pt-6">
+<a class="text-secondary flex items-center gap-2 font-bold text-xs uppercase tracking-widest hover:gap-3 transition-all" href="https://github.com/TECH-SUGATA/Emotional-Aware-Machine-EAM-">
+                                    VIEW DEMO <span class="material-symbols-outlined text-sm">play_circle</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="group relative bg-surface-container rounded-sm overflow-hidden glass-card flex flex-col h-full">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjWgCZyZoM-BpTBixLBnOXq8riHea7hIG2YtON7IoGLBzFNJnfFj4j1XvQy4WeguuRTE5Ddx8Lm_XGmAclcmrHP_f-Nm7PZh56CjAP3UK9AQvGPQNApVQrtmBblW3veXgaMjjOojtBfsaKwNtb1crGPR3sdXoPQWRekawVqlVWP5rYYiXJWjKL07RQMR8GhOWyxrk0Vj7JfRSpDkt8HuqXUeOjCUHYZWKYjU0X05fPaOG6JSa9TBJLuTumvf6cltAoRCdbK8xRZ7A"/>
+<div class="absolute top-4 right-4 bg-tertiary/20 backdrop-blur-md px-3 py-1 rounded-sm border border-tertiary/30">
+<span class="text-xs font-label text-tertiary font-bold uppercase">EdTech AI</span>
+</div>
+</div>
+<div class="p-8 space-y-4 flex flex-col flex-grow">
+<h4 class="text-2xl font-headline font-bold text-white">StudyBuddy.AI</h4>
+<p class="text-on-surface-variant text-sm flex-grow">Personalized AI learning assistant that optimizes study schedules based on cognitive load and performance tracking.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-surface-bright/50 text-[10px] rounded-sm text-white">React</span>
+<span class="px-2 py-1 bg-surface-bright/50 text-[10px] rounded-sm text-white">Flask</span>
+<span class="px-2 py-1 bg-surface-bright/50 text-[10px] rounded-sm text-white">OpenAI API</span>
+</div>
+<div class="pt-6">
+<a class="text-tertiary flex items-center gap-2 font-bold text-xs uppercase tracking-widest hover:gap-3 transition-all" href="https://github.com/Souvagya06/studybuddy-ai">
+                                    VIEW REPOSITORY <span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Project 4 -->
+<div class="group relative bg-surface-container rounded-sm overflow-hidden glass-card flex flex-col h-full">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQIM8rynxmXJi0BkHtN0R-UW8_s5ArQBsXBj908TUFDQZVRPx4SC7hnH87y6YoHOpPCeYaBF0kcPbeymrUHX7aoVYzIcLUBfpBeJUGierulaL-5p4W8w94jpkQQstgO1afmWvYHf3y6aKitvVuPjECoTrC5EdwwR0yVGz2Giv0Tf5So3agdrKF0IjAYkDLLipPsl83jpZ0KFfuKZtSiu1_6ZHfWUSMmLLpTUINksW-vu-aIbMzKTqU6Mat7CcbHArWexaXSFUZ0sw"/>
+<div class="absolute top-4 right-4 bg-secondary/20 backdrop-blur-md px-3 py-1 rounded-sm border border-secondary/30">
+<span class="text-xs font-label text-secondary font-bold uppercase">Disaster Management</span>
+</div>
+</div>
+<div class="p-8 space-y-4 flex flex-col flex-grow">
+<h4 class="text-2xl font-headline font-bold text-white">Crisis Connect AI</h4>
+<p class="text-on-surface-variant text-sm flex-grow">Intelligent disaster response system using real-time data to coordinate emergency services efficiently.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-surface-bright/50 text-[10px] rounded-sm text-white">Node.js</span>
+<span class="px-2 py-1 bg-surface-bright/50 text-[10px] rounded-sm text-white">GCP</span>
+<span class="px-2 py-1 bg-surface-bright/50 text-[10px] rounded-sm text-white">PostgreSQL</span>
+</div>
+<div class="pt-6">
+<a class="text-secondary flex items-center gap-2 font-bold text-xs uppercase tracking-widest hover:gap-3 transition-all" href="https://github.com/Bikram-pal/crisis-connect-ai">
+                                    VIEW REPOSITORY <span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Project 5 -->
+<div class="group relative bg-surface-container rounded-sm overflow-hidden glass-card flex flex-col h-full">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiOzQfzASsc-5Cf0DcQh6Lq7nESNXFobxQbGZUT4xFeA4devcDXDv66uCxHsFD6qh7W377z65gUk4Eg5aijWkjlWmJG_75sUh0vMKxKur-qQIflXSjpdR6qyDCv1lz9PnT_eFAkrojQT3t9b28waWQerzT9S-RHOF5Hk5IjowNX8-GcoRn3nHRR_H9Hvn68cLcrSgT_SObT92GTjUtTtaJXXeRBCwXFaqvslBszWMyLvB6SEjKLmcFUBEZOnfHpknG7ocIpvbbmtU"/>
+<div class="absolute top-4 right-4 bg-primary/20 backdrop-blur-md px-3 py-1 rounded-sm border border-primary/30">
+<span class="text-xs font-label text-primary font-bold uppercase">IoT &amp; Security</span>
+</div>
+</div>
+<div class="p-8 space-y-4 flex flex-col flex-grow">
+<h4 class="text-2xl font-headline font-bold text-white">Smart Attendance</h4>
+<p class="text-on-surface-variant text-sm flex-grow">RFID and facial recognition integrated web platform for seamless tracking and reporting in organizations.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-surface-bright/50 text-[10px] rounded-sm text-white">Python</span>
+<span class="px-2 py-1 bg-surface-bright/50 text-[10px] rounded-sm text-white">Flask</span>
+<span class="px-2 py-1 bg-surface-bright/50 text-[10px] rounded-sm text-white">Arduino</span>
+</div>
+<div class="pt-6">
+<a class="text-primary flex items-center gap-2 font-bold text-xs uppercase tracking-widest hover:gap-3 transition-all" href="https://github.com/Souvagya06/smart-rfid-attendance-system">
+                                    VIEW REPOSITORY <span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
 
-    <!-- Card 1 -->
-<div class="bg-[#0f172a] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 group">
-  <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300"/>
-  <div class="p-6">
-    <h3 class="text-lg font-semibold text-white mb-2">AI Plant Therapist</h3>
-    <p class="text-sm text-gray-400 mb-4">Detects plant diseases using deep learning with real-time feedback.</p>
-    <div class="flex gap-2 mb-4">
-      <span class="bg-gray-800 text-xs px-3 py-1 rounded-full">PyTorch</span>
-      <span class="bg-gray-800 text-xs px-3 py-1 rounded-full">OpenCV</span>
-    </div>
-    <div class="flex justify-end">
-      <button class="bg-gray-800 p-2 rounded-full hover:bg-primary transition">↗</button>
-    </div>
-  </div>
+<!-- Project 6 -->
+<div class="group relative bg-surface-container rounded-sm overflow-hidden glass-card flex flex-col h-full">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiOzQfzASsc-5Cf0DcQh6Lq7nESNXFobxQbGZUT4xFeA4devcDXDv66uCxHsFD6qh7W377z65gUk4Eg5aijWkjlWmJG_75sUh0vMKxKur-qQIflXSjpdR6qyDCv1lz9PnT_eFAkrojQT3t9b28waWQerzT9S-RHOF5Hk5IjowNX8-GcoRn3nHRR_H9Hvn68cLcrSgT_SObT92GTjUtTtaJXXeRBCwXFaqvslBszWMyLvB6SEjKLmcFUBEZOnfHpknG7ocIpvbbmtU"/>
+<div class="absolute top-4 right-4 bg-primary/20 backdrop-blur-md px-3 py-1 rounded-sm border border-primary/30">
+<span class="text-xs font-label text-primary font-bold uppercase">IoT &amp; Security</span>
+</div>
+</div>
+<div class="p-8 space-y-4 flex flex-col flex-grow">
+<h4 class="text-2xl font-headline font-bold text-white">AI-Powered Emergency Hospital Recommendation System</h4>
+<p class="text-on-surface-variant text-sm flex-grow">MediFind AI — An intelligent system that finds the best hospital during medical emergencies using ML predictions, NLP sentiment analysis, multi-factor ranking, and real-time crowd data.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-surface-bright/50 text-[10px] rounded-sm text-white">Python</span>
+<span class="px-2 py-1 bg-surface-bright/50 text-[10px] rounded-sm text-white">Node.js 18</span>
+<span class="px-2 py-1 bg-surface-bright/50 text-[10px] rounded-sm text-white">PostgreSQL </span>
+</div>
+<div class="pt-6">
+<a class="text-primary flex items-center gap-2 font-bold text-xs uppercase tracking-widest hover:gap-3 transition-all" href="https://github.com/shounak2006/Hospital-Management-Arogya-">
+                                    VIEW REPOSITORY <span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</div>
 </div>
 
-<!-- Card 2 -->
-<div class="bg-[#0f172a] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 group">
-  <img src="https://images.unsplash.com/photo-1677442135136-760c813a743c" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300"/>
-  <div class="p-6">
-    <h3 class="text-lg font-semibold text-white mb-2">Emotion AI System</h3>
-    <p class="text-sm text-gray-400 mb-4">Recognizes emotions and provides intelligent responses with AI.</p>
-    <div class="flex gap-2 mb-4">
-      <span class="bg-gray-800 text-xs px-3 py-1 rounded-full">NLP</span>
-      <span class="bg-gray-800 text-xs px-3 py-1 rounded-full">Python</span>
-    </div>
-    <div class="flex justify-end">
-      <button class="bg-gray-800 p-2 rounded-full hover:bg-primary transition">↗</button>
-    </div>
-  </div>
+<!-- Project 7 -->
+<div class="group relative bg-surface-container rounded-sm overflow-hidden glass-card flex flex-col h-full border-primary/40 shadow-[0_0_20px_rgba(188,19,254,0.15)]">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBotinWxNCL_ImGp0Tt0E2iB6GDUWcBAZwma3u5Ov0ulBUG4pxwWIMkctSaPPCjT0dk6h4v3BW2ELUTiQXETjhSDzuGTZJLtF4Zsr3NYfyH7UsGGxint5mAfY2lgcL6jygbSXwmY9si3A9lAMhKW_aZZ5mVTP7E9fT830NJPfCf7gW7uuhWrCHTLzxLzPpKFWGx0XQODDTb4LksLPHKBUTqtat-BVMEcYcF3Y4R-iGTrH3RakMtylKh8Ma3nLzuJtji__1GaPE5Ay8"/>
+<div class="absolute top-4 right-4 bg-primary/20 backdrop-blur-md px-3 py-1 rounded-sm border border-primary/30">
+<span class="text-xs font-label text-primary font-bold uppercase">Personal Brand</span>
 </div>
-
-<!-- Card 3 -->
-<div class="bg-[#0f172a] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 group">
-  <img src="https://images.unsplash.com/photo-1581090700227-4c4f50f0e2d0" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300"/>
-  <div class="p-6">
-    <h3 class="text-lg font-semibold text-white mb-2">Smart Attendance</h3>
-    <p class="text-sm text-gray-400 mb-4">IoT-based biometric attendance with real-time database sync.</p>
-    <div class="flex gap-2 mb-4">
-      <span class="bg-gray-800 text-xs px-3 py-1 rounded-full">Node.js</span>
-      <span class="bg-gray-800 text-xs px-3 py-1 rounded-full">IoT</span>
-    </div>
-    <div class="flex justify-end">
-      <button class="bg-gray-800 p-2 rounded-full hover:bg-primary transition">↗</button>
-    </div>
-  </div>
 </div>
-
-<!-- Card 4 -->
-<div class="bg-[#0f172a] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 group">
-  <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300"/>
-  <div class="p-6">
-    <h3 class="text-lg font-semibold text-white mb-2">GPS Tracking System</h3>
-    <p class="text-sm text-gray-400 mb-4">Real-time location tracking using GSM and web dashboard.</p>
-    <div class="flex gap-2 mb-4">
-      <span class="bg-gray-800 text-xs px-3 py-1 rounded-full">Leaflet</span>
-      <span class="bg-gray-800 text-xs px-3 py-1 rounded-full">Express</span>
-    </div>
-    <div class="flex justify-end">
-      <button class="bg-gray-800 p-2 rounded-full hover:bg-primary transition">↗</button>
-    </div>
-  </div>
+<div class="p-8 space-y-4 flex flex-col flex-grow">
+<h4 class="text-2xl font-headline font-bold text-white">Personal Portfolio</h4>
+<p class="text-on-surface-variant text-sm flex-grow">High-performance interactive developer portfolio featuring glassmorphism and real-time canvas animations.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-surface-bright/50 text-[10px] rounded-sm text-white">Tailwind CSS</span>
+<span class="px-2 py-1 bg-surface-bright/50 text-[10px] rounded-sm text-white">JavaScript</span>
+<span class="px-2 py-1 bg-surface-bright/50 text-[10px] rounded-sm text-white">Vite</span>
 </div>
-
-<!-- Card 5 -->
-<div class="bg-[#0f172a] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 group">
-  <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300"/>
-  <div class="p-6">
-    <h3 class="text-lg font-semibold text-white mb-2">AI Chatbot</h3>
-    <p class="text-sm text-gray-400 mb-4">Conversational AI chatbot using NLP and APIs.</p>
-    <div class="flex gap-2 mb-4">
-      <span class="bg-gray-800 text-xs px-3 py-1 rounded-full">AI</span>
-      <span class="bg-gray-800 text-xs px-3 py-1 rounded-full">API</span>
-    </div>
-    <div class="flex justify-end">
-      <button class="bg-gray-800 p-2 rounded-full hover:bg-primary transition">↗</button>
-    </div>
-  </div>
+<div class="pt-6">
+<a class="text-primary flex items-center gap-2 font-bold text-xs uppercase tracking-widest hover:gap-3 transition-all" href="https://github.com/TECH-SUGATA/PORTFOLIO">
+                                    VIEW REPOSITORY <span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
 </div>
-
-<!-- Card 6 -->
-<div class="bg-[#0f172a] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 group">
-  <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300"/>
-  <div class="p-6">
-    <h3 class="text-lg font-semibold text-white mb-2">Portfolio Website</h3>
-    <p class="text-sm text-gray-400 mb-4">Modern responsive portfolio using Tailwind CSS.</p>
-    <div class="flex gap-2 mb-4">
-      <span class="bg-gray-800 text-xs px-3 py-1 rounded-full">HTML</span>
-      <span class="bg-gray-800 text-xs px-3 py-1 rounded-full">Tailwind</span>
-    </div>
-    <div class="flex justify-end">
-      <button class="bg-gray-800 p-2 rounded-full hover:bg-primary transition">↗</button>
-    </div>
-  </div>
+</div>
+</div>
+</div>
 </div>
 </section>
-<!-- Certifications -->
-<section class="py-32 px-12 lg:px-24">
+<!-- Experience Timeline -->
+<section class="py-24 px-6" id="experience">
+<div class="max-w-4xl mx-auto">
+<h3 class="text-sm font-label uppercase tracking-[0.3em] text-primary mb-16 text-center">The Professional Architecture</h3>
+<div class="space-y-12 relative before:absolute before:left-[17px] before:top-2 before:bottom-2 before:w-[2px] before:bg-primary/20">
+<!-- Internship 1 -->
+<div class="relative pl-12 group">
+<div class="absolute left-0 top-2 w-9 h-9 rounded-full bg-surface-container-high border-2 border-primary group-hover:bg-primary transition-all duration-300 z-10 flex items-center justify-center shadow-[0_0_10px_rgba(188,19,254,0.4)]">
+<span class="w-2 h-2 bg-primary rounded-full group-hover:bg-white"></span>
+</div>
+<div>
+<span class="text-xs font-label text-primary uppercase tracking-widest">Ongoing</span>
+<h4 class="text-2xl font-headline font-bold mt-1 text-white">Full Stack Intern</h4>
+<p class="text-on-surface-variant font-medium">IEDC - Innovation and Entrepreneurship Development Centre</p>
+<p class="mt-4 text-on-surface-variant/80 leading-relaxed">
+                                Designing and implementing scalable web architectures. Focusing on high-performance backend systems and interactive UI/UX components for early-stage startups.
+                            </p>
+</div>
+</div>
+<!-- Internship 2 -->
+<div class="relative pl-12 group">
+<div class="absolute left-0 top-2 w-9 h-9 rounded-full bg-surface-container-high border-2 border-outline-variant group-hover:border-secondary transition-all duration-300 z-10 flex items-center justify-center">
+<span class="w-2 h-2 bg-outline-variant rounded-full group-hover:bg-secondary"></span>
+</div>
+<div>
+<span class="text-xs font-label text-on-surface-variant uppercase tracking-widest">2023 - 2024</span>
+<h4 class="text-2xl font-headline font-bold mt-1 text-white">AI Research Intern</h4>
+<p class="text-on-surface-variant font-medium">ICAT - International Center for Automotive Technology</p>
+<p class="mt-4 text-on-surface-variant/80 leading-relaxed">
+                                Applied machine learning algorithms to automotive diagnostics and sensor data processing. Collaborated on predictive maintenance models for electric vehicle systems.
+                            </p>
+</div>
+</div>
+<!-- Internship 3 -->
+<div class="relative pl-12 group">
+<div class="absolute left-0 top-2 w-9 h-9 rounded-full bg-surface-container-high border-2 border-outline-variant group-hover:border-tertiary transition-all duration-300 z-10 flex items-center justify-center">
+<span class="w-2 h-2 bg-outline-variant rounded-full group-hover:bg-tertiary"></span>
+</div>
+<div>
+<span class="text-xs font-label text-on-surface-variant uppercase tracking-widest">2023</span>
+<h4 class="text-2xl font-headline font-bold mt-1 text-white">Web Development Intern</h4>
+<p class="text-on-surface-variant font-medium">Pinnacle Labs</p>
+<p class="mt-4 text-on-surface-variant/80 leading-relaxed">
+                                Developed responsive frontend interfaces using modern frameworks. Streamlined internal tools for project management and client reporting.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Certifications & Hackathons -->
+<section class="py-24 px-6 bg-surface-container-low/40 backdrop-blur-md" id="certifications">
 <div class="max-w-7xl mx-auto">
-<h2 class="text-4xl font-black font-headline mb-16">Certifications &amp; <span class="rainbow-text">Achievements</span></h2>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-<div class="glass-card-deep p-6 rounded-xl flex flex-col items-center text-center group transition-all">
-<div class="w-16 h-16 rainbow-gradient rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
-<span class="material-symbols-outlined text-white text-3xl">verified</span>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+<!-- Left: Certs -->
+<div>
+<h3 class="text-sm font-label uppercase tracking-[0.3em] text-primary mb-8">Verified Mastery</h3>
+<div class="space-y-4">
+<div class="glass-card p-6 flex items-center gap-4 hover:translate-x-2 transition-transform hover:border-primary/40">
+<img class="w-12 h-12 rounded-sm object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSwSfW5J9n9sq5pvsF14MOypf9SH4LVVlzF-6k1A8IlbNCjjoygA7Jmihp-rC7LD8D8fe7Jb957g0OxK4vUdX5TKNPNO9Mn9kXjZs0V1WEWDV27w96bMaF0ySWDPv6mW4ggYo1EiBeVcC4bsq3QfDGcilM7z945nwB0fiQ-Zac2UFYnKkgxVe2AxiP6L3opOKGyGm_4oUcmHdFuPsKpCVDVtVxYJJrsjLxHR89N4Z0A0oEDR69ApHI5QvFUIRJxWvRmdqSsFS6aLA"/>
+<div>
+<h5 class="font-bold text-white">AI Specialization</h5>
+<p class="text-xs text-on-surface-variant uppercase">Coursera | DeepLearning.AI</p>
 </div>
-<h4 class="font-bold font-headline text-lg">AWS Certified</h4>
-<p class="text-xs text-on-surface/50 mt-2">Cloud Practitioner</p>
 </div>
-<div class="glass-card-deep p-6 rounded-xl flex flex-col items-center text-center group transition-all">
-<div class="w-16 h-16 rainbow-gradient rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
-<span class="material-symbols-outlined text-white text-3xl">psychology</span>
+<div class="glass-card p-6 flex items-center gap-4 hover:translate-x-2 transition-transform hover:border-primary/40">
+<img class="w-12 h-12 rounded-sm object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG94H3uX3HPk1bGi5oJjIJrF1SUk9AIpu4qE2zE6QiqtWnGd08TgZ9nJhDOSz-uR1p96AqWCG7XD7EfarSCDkN3YxwbreGJFbKEH_OBn5vKwTK_aqhjqedA0Ynr13wLR9axL4i_ejQ_aw_-MTKTTm4DCGiidvsmAJUbNGrm7NSck05oKDMULvLxyqwPvurF613cr0YQUb658LB3VwUrYkWFnjuSi4C_ZXZwUxPvNVDAB57lVUxOUKb-Ds3D-2yvNYiPYGUDZ5p7JY"/>
+<div>
+<h5 class="font-bold text-white">Cloud Architecting</h5>
+<p class="text-xs text-on-surface-variant uppercase">AWS Certification</p>
 </div>
-<h4 class="font-bold font-headline text-lg">Generative AI</h4>
-<p class="text-xs text-on-surface/50 mt-2">Specialization</p>
 </div>
-<div class="glass-card-deep p-6 rounded-xl flex flex-col items-center text-center group transition-all">
-<div class="w-16 h-16 rainbow-gradient rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
-<span class="material-symbols-outlined text-white text-3xl">workspace_premium</span>
+<div class="glass-card p-6 flex items-center gap-4 hover:translate-x-2 transition-transform hover:border-primary/40">
+<img class="w-12 h-12 rounded-sm object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1PrzpCRSwDe4UkSfnyzJRoEJ5-EYe7pYko_ZuQ6I9nKjbPg047tQ-g6P_dNTc7xBEZCbkPwIcUfD9tJe3aYLNsJizb4EyY5NbwekjKQzxX6qntuIe2MmrbqWRSGQP0dErCK9crll6GpMVhq08226yrBOdH6E4QXgtRp6oT3OM-tN11xsiDoUokS7nJKs4FoVJiZ6Ui0bPGcxb15stdn5Yf0S0aiA2kcDAfS0qiDD5ilx6nlLySpLloyU1nnVdSjfVuQbZMmVVjpk"/>
+<div>
+<h5 class="font-bold text-white">AI Specialization from IBM </h5>
+<p class="text-xs text-on-surface-variant uppercase">IBM Certification | IBM SkillBuild</p>
 </div>
-<h4 class="font-bold font-headline text-lg">SIH Finalist</h4>
-<p class="text-xs text-on-surface/50 mt-2">Smart India Hackathon</p>
 </div>
-<div class="glass-card-deep p-6 rounded-xl flex flex-col items-center text-center group transition-all">
-<div class="w-16 h-16 rainbow-gradient rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
-<span class="material-symbols-outlined text-white text-3xl">functions</span>
+<div class="glass-card p-6 flex items-center gap-4 hover:translate-x-2 transition-transform hover:border-primary/40">
+<img class="w-12 h-12 rounded-sm object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG94H3uX3HPk1bGi5oJjIJrF1SUk9AIpu4qE2zE6QiqtWnGd08TgZ9nJhDOSz-uR1p96AqWCG7XD7EfarSCDkN3YxwbreGJFbKEH_OBn5vKwTK_aqhjqedA0Ynr13wLR9axL4i_ejQ_aw_-MTKTTm4DCGiidvsmAJUbNGrm7NSck05oKDMULvLxyqwPvurF613cr0YQUb658LB3VwUrYkWFnjuSi4C_ZXZwUxPvNVDAB57lVUxOUKb-Ds3D-2yvNYiPYGUDZ5p7JY"/>
+<div>
+
+<h5 class="font-bold text-white">Image Processing</h5>
+<p class="text-xs text-on-surface-variant uppercase">MATLAB workshop</p>
 </div>
-<h4 class="font-bold font-headline text-lg">MATLAB Expert</h4>
-<p class="text-xs text-on-surface/50 mt-2">Numerical Computing</p>
+</div>
+</div>
+</div>
+<!-- Right: Hackathons -->
+<div>
+<h3 class="text-sm font-label uppercase tracking-[0.3em] text-secondary mb-8">Competitive Edge</h3>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-6 glass-card rounded-sm border border-secondary/20 text-center">
+<h5 class="text-2xl font-headline font-bold text-secondary">SIH</h5>
+<p class="text-xs text-on-surface-variant font-label mt-2">Smart India Hackathon Participant</p>
+</div>
+<div class="p-6 glass-card rounded-sm border border-secondary/20 text-center">
+<h5 class="text-2xl font-headline font-bold text-secondary">UNSTOP</h5>
+<p class="text-xs text-on-surface-variant font-label mt-2">Unstop Participants (Hackathon) </p>
+</div>
+<div class="p-6 glass-card rounded-sm border border-primary/20 text-center">
+<h5 class="text-2xl font-headline font-bold text-primary">IIT Guwahati</h5>
+<p class="text-xs text-on-surface-variant font-label mt-2">En-coder 2026 Winner</p>
+</div>
+<div class="p-6 glass-card rounded-sm border border-white/10 text-center col-span-2">
+<div class="flex justify-around items-center">
+<div class="text-center">
+<p class="text-lg font-bold text-white">LeetCode</p>
+<p class="text-xs text-on-surface-variant">100+ Solved</p>
+</div>
+<div class="w-px h-8 bg-white/10"></div>
+<div class="text-center">
+<p class="text-lg font-bold text-white">GFG</p>
+<p class="text-xs text-on-surface-variant">Top 5%</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Blog Section -->
+<section class="py-24 px-6" id="blog">
+<div class="max-w-7xl mx-auto">
+<div class="mb-16">
+<h3 class="text-sm font-label uppercase tracking-[0.3em] text-primary mb-4 text-center lg:text-left">Intellectual Stream</h3>
+<h2 class="text-4xl font-headline font-bold text-white text-center lg:text-left">Latest <span class="gradient-text">Insights</span></h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Blog Card 1 -->
+<div class="group glass-card p-0 rounded-sm overflow-hidden border-primary/20 hover:border-primary transition-all duration-500 shadow-[0_0_15px_rgba(188,19,254,0.05)] hover:shadow-[0_0_30px_rgba(188,19,254,0.2)] flex flex-col">
+<div class="h-64 md:h-80 overflow-hidden relative">
+<img alt="Generative AI" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoPmnT8VyaRU6L3hT7xwN03UFFMqINARDkrMbSZI2F5PU6zzUF4HwWhWIYGMdkBE51PqVokcj_qXKYhox154DQIEP-kVbHLKf2fUNgefFIN6E8JyJQMZTWKDvfsZBPpfD-3bKuaI5RREF-ctq08wfiwj8MasGDoplwjdw6I6SI0wRLSPkf1g6dAfBsujSwhyLFQgd7Gi2z-C_eOfZnIaw4P-2n7MgYVlpN6dozgJpF_mV-2jqGD3um9P5gknkzC7rptpy0ORRpzwc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim to-transparent opacity-60"></div>
+</div>
+<div class="p-8 space-y-4 flex-grow">
+<div class="text-xs font-label text-primary uppercase tracking-widest">Machine Learning</div>
+<h4 class="text-xl font-headline font-bold text-white group-hover:text-primary transition-colors">The Future of Generative AI Mastermind </h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Exploring how transformer architectures are reshaping the boundaries of human creativity and automated content generation.</p>
+<a class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white group-hover:text-primary transition-all group/btn" href="#">
+                                Read More
+                                <span class="material-symbols-outlined text-sm transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</a>
+</div>
+</div>
+
+
+<!-- Blog Card 2 -->
+<div class="group glass-card p-0 rounded-sm overflow-hidden border-secondary/20 hover:border-secondary transition-all duration-500 shadow-[0_0_15px_rgba(172,137,255,0.05)] hover:shadow-[0_0_30px_rgba(172,137,255,0.2)] flex flex-col">
+<div class="h-64 md:h-80 overflow-hidden relative">
+<img alt="Full Stack" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLvN3J4YGGpx_RIDZJnfu1l68882jsEvXaNFehser-DwPWYJIJZHh2VDjp6nDlRVEDQXU1U4pvHZ6z6-DPjRU2vrknfYRJbxF6dJnkMz9wgpYAO4XhcutSYxEXDn_xqEQAdQAoQqhkAK8ht9d6z6w5u9_oY0e3drors5XDtKJ8dc3PFNH8g8IYnRfFeEH19ronxJ5eXgqn-d9XXJWFNpllwa3pW6iKKtCX2UsHzfY98AfQ_swtWFnsBvyC4sgXuKiGsVCm35Us5Ug"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim to-transparent opacity-60"></div>
+</div>
+<div class="p-8 space-y-4 flex-grow">
+<div class="text-xs font-label text-secondary uppercase tracking-widest"> Full stack Development</div>
+<h4 class="text-xl font-headline font-bold text-white group-hover:text-secondary transition-colors">Mastering Full-Stack with Python</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Why the combination of Python, React, and FastAPI is becoming the gold standard for high-performance AI-driven applications.</p>
+<a class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white group-hover:text-secondary transition-all group/btn" href="#">
+                            Read More
+                            <span class="material-symbols-outlined text-sm transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Blog Card 3 -->
+<div class="group glass-card p-0 rounded-sm overflow-hidden border-tertiary/20 hover:border-tertiary transition-all duration-500 shadow-[0_0_15px_rgba(255,89,227,0.05)] hover:shadow-[0_0_30px_rgba(255,89,227,0.2)] flex flex-col">
+<div class="h-64 md:h-80 overflow-hidden relative">
+<img alt="Hackathon" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIw4ehZgfp2kVBwJgp_oKfNi2WoQa1iJGCHC8Kq3P4AVvJ0fwnU_mcPQfz_Jkiqa1lzEPYbDnZcpOl0JGZHMtmUsOybfoBDjyDBRdVXqPKk4lziAAW8SNG6_qR59bvUK7qsKUbcV0cQ7QZ1sIlyy09ZddssV7giGuRgTaigjj0r3q_tNwX5_FsL0AzM1A0flFSiCMqNpakic_I0q74PafMPwCDbAquO8qM0m5ZUAQkUtspvFjA6BmUubn-5kGHo70WXZdmKWVI9bg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim to-transparent opacity-60"></div>
+</div>
+<div class="p-8 space-y-4 flex-grow">
+<div class="text-xs font-label text-tertiary uppercase tracking-widest">Experience</div>
+<h4 class="text-xl font-headline font-bold text-white group-hover:text-tertiary transition-colors">My Journey at SIH 2024</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">A deep dive into the 36-hour coding marathon where we built a real-time solution for Smart India's biggest challenges.</p>
+<a class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white group-hover:text-tertiary transition-all group/btn" href="#">
+                            Read More
+                            <span class="material-symbols-outlined text-sm transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</a>
+</div>
 </div>
 </div>
 </div>
 </section>
 <!-- Contact Section -->
-<section class="py-32 px-12 lg:px-24" id="contact">
-<div class="max-w-7xl mx-auto">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-24">
-<div class="space-y-12">
-<div>
-<h2 class="text-6xl font-black font-headline tracking-tighter mb-8 leading-tight">Let's build <br/> something <span class="rainbow-text underline decoration-tertiary/20">legendary</span>.</h2>
-<p class="text-xl text-on-surface/60 max-w-md">Open for collaborations, freelance projects, or full-time opportunities.</p>
-</div>
+<section class="py-24 px-6" id="contact">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16">
+<div class="lg:w-1/2">
+<h3 class="text-sm font-label uppercase tracking-[0.3em] text-primary mb-6">Connect</h3>
+<h2 class="text-5xl font-headline font-bold mb-8 text-white">Let's build something <br/><span class="gradient-text">amazing together.</span></h2>
+<div class="space-y-6 mt-12">
 
-<div class="space-y-6">
-
-  <!-- EMAIL -->
-  <a href="mailto:sugatanayak65@gmail.com" class="flex items-center gap-6 group">
+<div class="flex items-center gap-4">
+<!-- EMAIL -->
+  <a href="mailto:sugatanayak65@gmail.com" class="flex items-center gap-4 group">
 
     <!-- Icon -->
     <div class="w-12 h-12 rounded-full bg-[#1e293b] flex items-center justify-center group-hover:bg-gradient-to-r from-purple-500 to-pink-500 transition">
@@ -397,76 +774,95 @@
         sugatanayak65@gmail.com
       </p>
     </div>
+    </div>
 
   </a>
 
-
-  <!-- LOCATION -->
-  <div class="flex items-center gap-6 group">
-
-    <!-- Icon -->
-    <div class="w-12 h-12 rounded-full bg-[#1e293b] flex items-center justify-center group-hover:bg-gradient-to-r from-purple-500 to-pink-500 transition">
-      <span class="material-symbols-outlined text-white">location_on</span>
-    </div>
-
-    <!-- Text -->
-    <div>
-      <p class="text-sm text-gray-400">Based in</p>
-      <p class="text-lg font-semibold text-white group-hover:text-pink-400 transition">
-        Kolkata, India
-      </p>
-    </div>
-
-  </div>
-
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center border border-secondary/20 shadow-[0_0_15px_rgba(172,137,255,0.1)]">
+<span class="material-symbols-outlined text-secondary">call</span>
+</div>
+ <p class="text-lg font-semibold text-white group-hover:text-pink-400 transition">
+<p class="text-on-surface-variant">+91-9883131330   
+</p>
 </div>
 
- 
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-tertiary/10 flex items-center justify-center border border-tertiary/20 shadow-[0_0_15px_rgba(255,89,227,0.1)]">
+<span class="material-symbols-outlined text-tertiary">location_on</span>
+</div>
+<p class="text-on-surface-variant">Kolkata, India</p>
+</div>
+</div>
+<!-- Social Links Update -->
+<div class="flex items-center gap-4 mt-12">
 
-
-<div class="flex gap-4">
 <a class="w-14 h-14 rounded-xl glass-card-deep flex items-center justify-center hover:scale-110 transition-transform" href="https://www.linkedin.com/in/sugata-nayak-343099322"><img alt="LinkedIn" class="w-9 h-9" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"/></a>
 <a class="w-14 h-14 rounded-xl glass-card-deep flex items-center justify-center hover:scale-110 transition-transform" href="https://github.com/TECH-SUGATA"><img alt="GitHub" class="w-9 h-9" src="https://img.icons8.com/ios11/512/FFFFFF/github.png"/></a>
 <a class="w-14 h-14 rounded-xl glass-card-deep flex items-center justify-center hover:scale-110 transition-transform" href="https://www.instagram.com/nayak_sugata?igsh=djNyMXF6emJud3B0"><img alt="Instagram" class="w-9 h-9" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"/></a>
 <a class="w-14 h-14 rounded-xl glass-card-deep flex items-center justify-center hover:scale-110 transition-transform" href="https://www.facebook.com/share/1GimdSBbSc/"><img alt="Facebook" class="w-9 h-9" src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"/></a>
 </div>
 </div>
-<div class="glass-card-deep p-12 rounded-xl border-white/10">
-<form class="space-y-8">
+
+
+<div class="lg:w-1/2">
+<form class="glass-card p-8 lg:p-12 rounded-sm space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div class="space-y-2">
-<label class="text-sm font-medium text-on-surface/50">Full Name</label>
-<input class="w-full bg-white/5 border border-white/10 rounded-lg p-4 focus:ring-2 focus:ring-primary/40 focus:border-primary placeholder-white/20 text-white" placeholder="John Doe" type="text"/>
+<label class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Name</label>
+<input class="w-full bg-surface-container-lowest border border-white/10 p-4 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors text-white rounded-sm" placeholder="John Doe" type="text"/>
 </div>
 <div class="space-y-2">
-<label class="text-sm font-medium text-on-surface/50">Email Address</label>
-<input class="w-full bg-white/5 border border-white/10 rounded-lg p-4 focus:ring-2 focus:ring-primary/40 focus:border-primary placeholder-white/20 text-white" placeholder="john@example.com" type="email"/>
+<label class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Email</label>
+<input class="w-full bg-surface-container-lowest border border-white/10 p-4 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors text-white rounded-sm" placeholder="john@example.com" type="email"/>
+</div>
 </div>
 <div class="space-y-2">
-<label class="text-sm font-medium text-on-surface/50">Message</label>
-<textarea class="w-full bg-white/5 border border-white/10 rounded-lg p-4 focus:ring-2 focus:ring-primary/40 focus:border-primary placeholder-white/20 text-white" placeholder="Tell me about your project..." rows="5"></textarea>
+<label class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Message</label>
+<textarea class="w-full bg-surface-container-lowest border border-white/10 p-4 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors text-white rounded-sm" placeholder="Your vision..." rows="5"></textarea>
 </div>
-<button class="w-full rainbow-gradient glow-button text-white py-5 rounded-xl font-black font-headline tracking-widest uppercase hover:scale-[1.02] transition-transform">
-                            Send Message
-                        </button>
+<button class="w-full py-4 bg-primary text-white font-bold rounded-sm uppercase tracking-widest hover:scale-[1.02] active:scale-95 transition-all shadow-[0_0_20px_rgba(188,19,254,0.3)] hover:shadow-[0_0_30px_rgba(188,19,254,0.5)]" type="submit">Send Message</button>
 </form>
-</div>
 </div>
 </div>
 </section>
 </main>
 <!-- Footer -->
-<footer class="bg-surface/80 backdrop-blur-xl w-full py-16 border-t border-white/10">
-<div class="flex flex-col md:flex-row justify-between items-center px-12 max-w-7xl mx-auto">
-<div class="mb-8 md:mb-0">
-<span class="font-headline font-black rainbow-text text-xl">Sugata Nayak</span>
-<p class="text-on-surface/50 text-sm tracking-wide mt-2">© 2024 Sugata Nayak. Built with Neural Prism logic.</p>
-</div>
-<div class="flex gap-8">
-<a class="text-on-surface/50 hover:text-white transition-colors text-sm font-medium" href="#">LinkedIn</a>
-<a class="text-on-surface/50 hover:text-white transition-colors text-sm font-medium" href="#">GitHub</a>
-<a class="text-on-surface/50 hover:text-white transition-colors text-sm font-medium" href="#">Twitter</a>
-<a class="text-on-surface/50 hover:text-white transition-colors text-sm font-medium" href="#">Email</a>
+<footer class="bg-black/60 backdrop-blur-xl border-t border-white/10 py-12 px-8 relative z-10">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto space-y-8 md:space-y-0">
+<div class="text-[#BC13FE] font-bold font-['Space_Grotesk'] text-lg">
+                Sugata Nayak
+            </div>
+<div class="text-gray-500 font-['Space_Grotesk'] text-sm uppercase tracking-widest text-center md:text-left">
+                © 2024 Sugata Nayak. Built with Atmospheric Precision.
+            </div>
+<div class="flex items-center space-x-6 font-['Space_Grotesk'] text-sm uppercase tracking-widest">
+<a class="text-gray-500 hover:text-[#BC13FE] transition-colors duration-300 hover:-translate-y-1" href="https://github.com/TECH-SUGATA">GitHub</a>
+<a class="text-gray-500 hover:text-[#BC13FE] transition-colors duration-300 hover:-translate-y-1" href="https://www.linkedin.com/in/sugata-nayak-343099322">LinkedIn</a>
+<a class="text-gray-500 hover:text-[#BC13FE] transition-colors duration-300 hover:-translate-y-1" href="mailto:sugatanayak65@gmail.com">Email</a>
+<a class="text-gray-500 hover:text-[#BC13FE] transition-colors duration-300 hover:-translate-y-1" href="https://www.facebook.com/share/1GimdSBbSc/">Facebook</a>
 </div>
 </div>
 </footer>
+<style>
+        @keyframes slide {
+            0%, 20% { transform: translateY(0); }
+            25%, 45% { transform: translateY(-100%); }
+            50%, 70% { transform: translateY(-200%); }
+            75%, 95% { transform: translateY(-300%); }
+            100% { transform: translateY(0); }
+        }
+        .animate-\[slide_4s_infinite\] {
+            animation: slide 4s cubic-bezier(0.85, 0, 0.15, 1) infinite;
+        }
+        .animate-\[slide_4s_infinite_delay-1s\] {
+            animation: slide 4s cubic-bezier(0.85, 0, 0.15, 1) infinite 1s;
+        }
+        .animate-\[slide_4s_infinite_delay-2s\] {
+            animation: slide 4s cubic-bezier(0.85, 0, 0.15, 1) infinite 2s;
+        }
+        .animate-\[slide_4s_infinite_delay-3s\] {
+            animation: slide 4s cubic-bezier(0.85, 0, 0.15, 1) infinite 3s;
+        }
+    </style>
 </body></html>
