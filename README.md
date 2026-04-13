@@ -108,13 +108,6 @@
 
 ---
 
-## ⚙️ Setup
-
-```bash
-git clone https://github.com/tech-sugata/PORTFOLIO.git
-cd PORTFOLIO
-open index.html
-
 
 ---
 
@@ -148,3 +141,15 @@ open index.html
 </p>
 
 ---
+
+
+## ⚙️ Setup
+
+```bash
+git clone https://github.com/tech-sugata/PORTFOLIO.git
+cd PORTFOLIO
+open index.html
+
+
+---
+
