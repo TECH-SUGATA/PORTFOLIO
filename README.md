@@ -93,16 +93,6 @@
 ✔️ Clean and maintainable code  
 ✔️ Real-world project experience  
 
----
-
-## 📸 Portfolio Preview
-
-<p align="center">
-  <img src="https://via.placeholder.com/900x450.png?text=Portfolio+Preview">
-</p>
-
----
-
 
 ---
 
