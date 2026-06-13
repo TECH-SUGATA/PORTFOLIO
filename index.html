@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -9,9 +9,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
 <style>
-/* ══════════════════════════════════════
-   RESET & ROOT
-══════════════════════════════════════ */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
   --bg:#05060f;--bg2:#07090e;
@@ -29,7 +26,6 @@ img{display:block;max-width:100%}
 a{text-decoration:none;color:inherit}
 button{font-family:inherit;cursor:pointer}
 
-/* ══ CANVAS / BACKGROUND ══ */
 #bgCanvas{position:fixed;inset:0;z-index:-3;width:100%;height:100%}
 .grid-lines{position:fixed;inset:0;z-index:-2;pointer-events:none;
   background-image:linear-gradient(rgba(10,132,255,.04) 1px,transparent 1px),
@@ -47,13 +43,11 @@ button{font-family:inherit;cursor:pointer}
   border-radius:50%;translate:-50% -50%;
   background:radial-gradient(circle,rgba(10,132,255,.05) 0%,rgba(0,200,150,.02) 50%,transparent 70%)}
 
-/* ══ UTILITY ══ */
 .gt{
   background:linear-gradient(125deg,#FFB020 0%,#00C896 38%,#0A84FF 68%,#FF6B8A 100%);
   -webkit-background-clip:text;background-clip:text;
   -webkit-text-fill-color:transparent;
   display:inline;
-  /* Prevent clipping on descenders */
   padding:0 .06em;
   line-height:1.18;
 }
@@ -71,7 +65,6 @@ button{font-family:inherit;cursor:pointer}
 [data-d="5"]{transition-delay:.40s}[data-d="6"]{transition-delay:.48s}
 .mi{font-family:'Material Symbols Outlined';font-style:normal;font-size:1em;vertical-align:middle;font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24}
 
-/* ══ NAV ══ */
 .nav{position:fixed;top:0;left:0;width:100%;height:var(--nav);z-index:200;
   background:rgba(5,6,15,.7);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);
   border-bottom:1px solid rgba(10,132,255,.1)}
@@ -106,7 +99,6 @@ button{font-family:inherit;cursor:pointer}
 .drawer a:hover{color:var(--ic);background:rgba(10,132,255,.06)}
 @media(max-width:900px){.nl{display:none}.ham{display:flex}}
 
-/* ══ HERO ══ */
 .hero{min-height:100svh;display:flex;align-items:center;padding-top:var(--nav)}
 .hero-grid{
   display:grid;
@@ -125,14 +117,6 @@ button{font-family:inherit;cursor:pointer}
 .avail span{font-family:'Syne',sans-serif;font-size:.68rem;font-weight:700;
   letter-spacing:.13em;text-transform:uppercase;color:var(--em)}
 
-/* ═══ NAME FIX — The core issue was word-break mid-word ═══ */
-
-/* KEEP YOUR CODE + ADD FIXES */
-
-/* ===== FINAL HERO TEXT FIX ===== */
-
-/* ===== FINAL HERO FIX ===== */
-
 .hero-h1 {
   font-family: 'Outfit', sans-serif;
   font-weight: 900;
@@ -147,9 +131,6 @@ button{font-family:inherit;cursor:pointer}
   white-space: normal;
   word-break: break-word;
 }
-
-
-
 
 .tick-wrap{height:clamp(34px,4.5vw,50px);overflow:hidden;position:relative}
 .tick-item{position:absolute;inset:0;display:flex;align-items:center;
@@ -188,22 +169,14 @@ button{font-family:inherit;cursor:pointer}
 .soc:hover{transform:translateY(-4px);border-color:rgba(0,200,150,.4);box-shadow:0 8px 24px rgba(0,200,150,.18)}
 .soc img{width:20px;height:20px;object-fit:contain}
 
-/* ══════════════════════════════════════
-   PHOTO MODULE — COMPLETELY REBUILT
-   Strategy: Fixed-size outer wrapper with
-   overflow:visible so chips never get clipped.
-   The actual image has overflow:hidden via inner div.
-══════════════════════════════════════ */
 .photo-module{
   position:relative;
   display:flex;
   justify-content:center;
   align-items:center;
-  /* Reserve extra space for chips that overflow left/right */
   padding:20px 28px 40px 28px;
 }
 
-/* Glow blob behind photo */
 .photo-blob{
   position:absolute;
   width:380px;height:380px;
@@ -216,7 +189,6 @@ button{font-family:inherit;cursor:pointer}
 }
 @keyframes bpulse{from{transform:scale(.88)}to{transform:scale(1.08)}}
 
-/* Rotating rings */
 .ring{position:absolute;border-radius:50%;pointer-events:none;top:50%;left:50%;translate:-50% -50%}
 .ring1{width:500px;height:500px;
   background:conic-gradient(from 0deg,transparent 0%,rgba(10,132,255,.28) 20%,transparent 35%,rgba(0,200,150,.2) 60%,transparent 72%,rgba(255,176,32,.18) 88%,transparent 100%);
@@ -229,21 +201,19 @@ button{font-family:inherit;cursor:pointer}
 .ring3{width:310px;height:310px;border:1px dashed rgba(10,132,255,.12);animation:rs1 32s linear infinite}
 @keyframes rs1{to{transform:rotate(360deg)}}
 
-/* ── PHOTO FRAME — overflow:visible so chips show ── */
 .photo-frame{
   position:relative;
   width:390px;
   height:490px;
   flex-shrink:0;
-  overflow:visible;   /* CRITICAL: chips must not be clipped */
+  overflow:visible;
 }
 
-/* ── PHOTO INNER — clips the image only ── */
 .photo-inner{
   width:100%;
   height:100%;
   border-radius:22px;
-  overflow:hidden;    /* image clips here, not at frame level */
+  overflow:hidden;
   position:relative;
   box-shadow:
     0 0 0 1px rgba(10,132,255,.45),
@@ -270,7 +240,6 @@ button{font-family:inherit;cursor:pointer}
   transition:transform .7s,filter .6s;
 }
 .photo-frame:hover .photo-inner img{transform:scale(1.04);filter:contrast(1.07) brightness(1.04) saturate(1.18)}
-/* Corner accent lines */
 .photo-inner::before{
   content:'';position:absolute;inset:0;z-index:2;pointer-events:none;
   background:
@@ -279,14 +248,12 @@ button{font-family:inherit;cursor:pointer}
     linear-gradient(to top right,rgba(0,200,150,.8) 0%,transparent 22%) bottom left/2px 2px no-repeat,
     linear-gradient(to top left,rgba(0,200,150,.8) 0%,transparent 22%) bottom right/2px 2px no-repeat
 }
-/* Sheen */
 .photo-inner::after{
   content:'';position:absolute;inset:0;
   background:linear-gradient(145deg,rgba(255,255,255,.06) 0%,transparent 45%,rgba(0,200,150,.04) 100%);
   pointer-events:none
 }
 
-/* ══ CHIPS — anchored to .photo-frame ══ */
 .chip{
   position:absolute;
   display:flex;align-items:center;gap:10px;
@@ -297,7 +264,6 @@ button{font-family:inherit;cursor:pointer}
   white-space:nowrap;
   z-index:30;
   pointer-events:none;
-  /* hard shadow for legibility */
   box-shadow:0 10px 32px rgba(0,0,0,.7),0 2px 8px rgba(0,0,0,.5);
 }
 .chip-ic{
@@ -309,7 +275,6 @@ button{font-family:inherit;cursor:pointer}
 .chip-t{font-family:'Syne',sans-serif;font-weight:700;font-size:.83rem;color:var(--txt);line-height:1.2}
 .chip-s{font-size:.64rem;color:var(--muted);margin-top:2px}
 
-/* Chip 1: AI Engineer — left side, vertically centered */
 .chip1{
   left:-20px;
   top: 75%;
@@ -318,7 +283,6 @@ button{font-family:inherit;cursor:pointer}
   box-shadow:0 10px 32px rgba(0,0,0,.7),0 0 18px rgba(10,132,255,.18);
   animation:fc1 4s ease-in-out infinite;
 }
-/* Chip 2: Full Stack — right side, vertically centered */
 .chip2{
   right:-20px;
   top:80%;
@@ -327,7 +291,6 @@ button{font-family:inherit;cursor:pointer}
   box-shadow:0 10px 32px rgba(0,0,0,.7),0 0 18px rgba(0,200,150,.15);
   animation:fc2 5s ease-in-out infinite;
 }
-/* Chip 3: IIT Guwahati — bottom center */
 .chip3{
   bottom:-22px;
   left:50%;
@@ -340,9 +303,6 @@ button{font-family:inherit;cursor:pointer}
 @keyframes fc2{0%,100%{transform:translateY(calc(-50%))}50%{transform:translateY(calc(-50% + 8px))}}
 @keyframes fc3{0%,100%{transform:translateX(-50%)}50%{transform:translateX(calc(-50%)) translateY(-8px)}}
 
-/* ══════════════════════
-   RESPONSIVE — HERO
-══════════════════════ */
 @media(min-width:1200px){
   .photo-frame{width:410px;height:510px}
   .ring1{width:530px;height:530px}.ring2{width:420px;height:420px}.ring3{width:325px;height:325px}
@@ -364,7 +324,6 @@ button{font-family:inherit;cursor:pointer}
   .hero-left{align-items:center}
   .hero-desc{text-align:center;margin:0 auto}
   .hero-btns,.hero-stats,.socials{justify-content:center}
-  /* Photo comes first on mobile */
   .photo-module{
     order:-1;
     padding:20px 40px 44px 40px;
@@ -397,29 +356,20 @@ button{font-family:inherit;cursor:pointer}
   .chip1,.chip2,.chip3{display:none}
 }
 
-/* ══ ABOUT ══ */
-
-/* ===== FINAL HERO TEXT FIX ===== */
-
-
-
 .h1{
   font-family:'Syne',sans-serif;
   font-weight:800;
   font-size:clamp(1.9rem,4.8vw,3.8rem);
   line-height:1.14;
   letter-spacing:-.025em;
-
-  width:100%;          /* FIX */
+  width:100%;
 }
-
 .name-line{
   display:block;
-  white-space:nowrap;  /* keep single line */
+  white-space:nowrap;
   font-size:clamp(2rem,5.2vw,4rem);
   line-height:1.1;
-
-  max-width:100%;      /* FIX */
+  max-width:100%;
 }
 
 /* ══ SKILLS ══ */
@@ -445,6 +395,40 @@ button{font-family:inherit;cursor:pointer}
   transition:transform var(--ease),border-color var(--ease),box-shadow var(--ease)}
 .pj-card:hover{transform:translateY(-8px);border-color:rgba(0,200,150,.42);
   box-shadow:0 28px 56px rgba(0,0,0,.48),0 0 32px rgba(0,200,150,.1)}
+
+/* Premium project card variant for new cards */
+.pj-card.premium{
+  position:relative;
+}
+.pj-card.premium::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  border-radius:var(--r);
+  padding:1px;
+  background:linear-gradient(135deg,transparent 0%,rgba(10,132,255,.0) 40%,rgba(0,200,150,.0) 100%);
+  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+  pointer-events:none;
+  transition:background .4s;
+}
+.pj-card.premium:hover::before{
+  background:linear-gradient(135deg,rgba(10,132,255,.4) 0%,rgba(0,200,150,.4) 50%,rgba(56,189,248,.3) 100%);
+}
+
+/* Image overlay shimmer on new cards */
+.pj-card.premium .pj-img::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg,rgba(10,132,255,.12) 0%,transparent 50%,rgba(0,200,150,.08) 100%);
+  z-index:1;
+  opacity:0;
+  transition:opacity .4s;
+}
+.pj-card.premium:hover .pj-img::before{opacity:1}
+
 .pj-img{aspect-ratio:16/9;overflow:hidden;position:relative;flex-shrink:0}
 .pj-img img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
 .pj-card:hover .pj-img img{transform:scale(1.09)}
@@ -459,6 +443,15 @@ button{font-family:inherit;cursor:pointer}
 .pj-l{display:inline-flex;align-items:center;gap:5px;font-family:'Syne',sans-serif;font-weight:700;
   font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;transition:gap var(--ease)}
 .pj-l:hover{gap:10px}
+
+/* Premium tech stack indicator line */
+.pj-card.premium .pj-body{
+  border-top:1px solid transparent;
+  background-image:linear-gradient(var(--bg),var(--bg)),linear-gradient(90deg,transparent,rgba(10,132,255,.18),transparent);
+  background-clip:padding-box,border-box;
+  background-origin:padding-box,border-box;
+}
+
 @media(max-width:1020px){.pj-g{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.pj-g{grid-template-columns:1fr}}
 
@@ -486,9 +479,7 @@ button{font-family:inherit;cursor:pointer}
 }
 @media(max-width:480px){.ex-b{padding:16px}}
 
-/* ══════════════════════════════════════
-   CERTIFICATIONS — WITH COVER IMAGES
-══════════════════════════════════════ */
+/* ══ CERTIFICATIONS ══ */
 .ct-bg{background:rgba(7,9,18,.55)}
 .cert-cards-grid{
   display:grid;
@@ -496,13 +487,11 @@ button{font-family:inherit;cursor:pointer}
   gap:20px;
   margin-top:44px;
 }
-
-/* ── Cert card has a cover image at top ── */
 .cert-card{
   background:var(--card);
   border:1px solid var(--card-b);
   border-radius:var(--r);
-  overflow:hidden;          /* so image top corners clip nicely */
+  overflow:hidden;
   display:flex;
   flex-direction:column;
   backdrop-filter:blur(20px);
@@ -521,8 +510,6 @@ button{font-family:inherit;cursor:pointer}
   border-color:var(--ca,rgba(10,132,255,.4));
   box-shadow:0 22px 52px rgba(0,0,0,.48),0 0 30px var(--ca-glow,rgba(10,132,255,.12));
 }
-
-/* Cover image at top of card */
 .cert-cover{
   width:100%;
   height:130px;
@@ -540,17 +527,14 @@ button{font-family:inherit;cursor:pointer}
   transform:scale(1.06);
   filter:brightness(.85) saturate(1.05);
 }
-/* Gradient overlay on cover so logo pops */
 .cert-cover::after{
   content:'';position:absolute;inset:0;
   background:linear-gradient(to bottom,rgba(5,6,15,.2) 0%,rgba(5,6,15,.72) 100%);
 }
-
-/* Logo badge overlapping cover bottom */
 .cert-logo-row{
   display:flex;align-items:center;gap:12px;
   padding:0 18px;
-  margin-top:-22px;   /* pulls logo up over cover */
+  margin-top:-22px;
   position:relative;
   z-index:1;
 }
@@ -565,8 +549,6 @@ button{font-family:inherit;cursor:pointer}
 .cert-logo-wrap img{
   width:28px;height:28px;object-fit:contain;
 }
-
-/* Card body */
 .cert-body{
   padding:10px 18px 20px;
   display:flex;flex-direction:column;gap:5px;flex:1;
@@ -581,8 +563,6 @@ button{font-family:inherit;cursor:pointer}
   font-family:'Syne',sans-serif;font-size:.63rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
   border:1px solid;
 }
-
-/* Hackathon grid */
 .hack-section{margin-top:52px}
 .hack-section-title{font-family:'Syne',sans-serif;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--em);margin-bottom:16px}
 .hk-g{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
@@ -668,14 +648,12 @@ button{font-family:inherit;cursor:pointer}
 }
 @media(max-width:400px){.cmethods{grid-template-columns:1fr}}
 
-/* ══ WA FAB ══ */
 .wa{position:fixed;bottom:28px;right:28px;z-index:999;width:58px;height:58px;border-radius:50%;
   background:linear-gradient(135deg,#25D366,#128C7E);display:flex;align-items:center;justify-content:center;
   box-shadow:0 6px 28px rgba(37,211,102,.5);transition:transform var(--ease),box-shadow var(--ease)}
 .wa:hover{transform:scale(1.14) translateY(-3px);box-shadow:0 12px 36px rgba(37,211,102,.65)}
 .wa svg{width:28px;height:28px}
 
-/* ══ FOOTER ══ */
 .footer{padding:clamp(24px,4vw,40px) 0;background:rgba(0,0,0,.75);
   backdrop-filter:blur(28px);border-top:1px solid rgba(10,132,255,.08)}
 .fi{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px}
@@ -724,42 +702,32 @@ button{font-family:inherit;cursor:pointer}
 
 <!-- ══ HERO ══ -->
 <section class="hero"><div class="con"><div class="hero-grid">
-
-  <!-- LEFT COLUMN -->
   <div class="hero-left">
     <div class="avail reveal">
       <span class="avail-dot"></span>
       <span>Available for Opportunities</span>
     </div>
-
-    <!-- NAME — white-space:nowrap on .name-line prevents mid-word break -->
     <h1 class="h1 reveal" data-d="1">
       Hi, I'm<br/>
       <span class="name-line gt">Sugata&nbsp;Nayak</span>
     </h1>
-
-    <!-- Rotating titles -->
     <div class="tick-wrap reveal" data-d="2" id="ticker">
       <div class="tick-item" style="color:#E8F4FF;">Full Stack Developer</div>
       <div class="tick-item" style="color:#00C896;">AI &amp; ML Engineer</div>
       <div class="tick-item" style="color:#FFB020;">Python Programmer</div>
       <div class="tick-item" style="color:#38BDF8;">DSA Problem Solver</div>
     </div>
-
     <p class="hero-desc reveal" data-d="3">Full Stack Developer &amp; Python Programmer — building the future with neural networks and clean code, focused on creating impactful intelligent systems.</p>
-
     <div class="hero-btns reveal" data-d="4">
       <a href="#projects" class="bp">View Projects <span class="mi">arrow_outward</span></a>
       <a href="#contact" class="bg">Contact Me</a>
     </div>
-
     <div class="hero-stats reveal" data-d="5">
       <div><div class="stat-n"><span></span></div><div class="stat-l">Projects Built</div></div>
       <div><div class="stat-n"><span></span></div><div class="stat-l">Internships</div></div>
       <div><div class="stat-n"><span></span></div><div class="stat-l">LeetCode Solved</div></div>
-      <div><div class="stat-n"><span></span></div><div class="stat-l"> Industrial Certifications</div></div>
+      <div><div class="stat-n"><span></span></div><div class="stat-l">Industrial Certifications</div></div>
     </div>
-
     <div class="socials reveal" data-d="6">
       <a href="https://github.com/TECH-SUGATA" target="_blank" class="soc" title="GitHub">
         <img src="https://img.icons8.com/ios11/512/FFFFFF/github.png" alt="GitHub"/>
@@ -775,23 +743,15 @@ button{font-family:inherit;cursor:pointer}
       </a>
     </div>
   </div>
-
-  <!-- RIGHT COLUMN — PHOTO WITH CHIPS -->
   <div class="photo-module reveal" data-d="2">
     <div class="photo-blob"></div>
     <div class="ring ring1"></div>
     <div class="ring ring2"></div>
     <div class="ring ring3"></div>
-
-    <!-- photo-frame: overflow:visible so chips show outside image bounds -->
     <div class="photo-frame">
-
-      <!-- photo-inner: overflow:hidden clips the image -->
       <div class="photo-inner">
         <img src="https://i.ibb.co/wNYrcrqX/Screenshot-2026-04-04-052453.png" alt="Sugata Nayak"/>
       </div>
-
-      <!-- CHIP 1: AI Engineer — floats left side -->
       <div class="chip chip1">
         <div class="chip-ic" style="background:rgba(10,132,255,.2);">
           <span class="mi" style="color:#0A84FF;font-size:1.15rem;">psychology</span>
@@ -801,8 +761,6 @@ button{font-family:inherit;cursor:pointer}
           <div class="chip-s">Focus Area</div>
         </div>
       </div>
-
-      <!-- CHIP 2: Full Stack — floats right side -->
       <div class="chip chip2">
         <div class="chip-ic" style="background:rgba(0,200,150,.16);">
           <span class="mi" style="color:#00C896;font-size:1.15rem;">code</span>
@@ -812,8 +770,6 @@ button{font-family:inherit;cursor:pointer}
           <div class="chip-s">Developer</div>
         </div>
       </div>
-
-      <!-- CHIP 3: IIT Guwahati — floats bottom -->
       <div class="chip chip3">
         <div class="chip-ic" style="background:rgba(255,176,32,.14);font-size:1.1rem;">🏆</div>
         <div>
@@ -821,70 +777,43 @@ button{font-family:inherit;cursor:pointer}
           <div class="chip-s">En-coder 2026</div>
         </div>
       </div>
-
-    </div><!-- /photo-frame -->
-  </div><!-- /photo-module -->
-
+    </div>
+  </div>
 </div></div></section>
 
 <!-- ══ ABOUT ══ -->
-
 <section class="sec about-bg">
   <div class="con">
-    
-    <!-- make parent relative -->
     <div class="about-g relative">
-
-      <!-- LEFT TITLE (FORCED LEFT) -->
       <div class="about-sticky reveal absolute left-0 top-0 w-[30%] text-left">
         <h2 style="font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.9rem,3.5vw,2.7rem);line-height:1.2;">
           The<br/><span class="gt2">Curator's</span><br/>Manifesto
         </h2>
       </div>
-
-      <!-- RIGHT CONTENT (SHIFTED RIGHT) -->
       <div style="display:flex;flex-direction:column;gap:18px;" class="ml-[32%]">
-
         <p style="font-size:1.05rem;line-height:1.88;color:var(--muted);" class="reveal" data-d="1">
           I am a <strong style="color:var(--txt);">🚀 B.Tech CSE (AI) Student at IEM, Kolkata</strong> &amp; Full Stack Developer — passionate about building AI-driven and scalable digital solutions bridging human intuition with algorithmic precision.
         </p>
-
         <p style="font-size:.95rem;line-height:1.85;color:var(--muted);" class="reveal" data-d="2">
           🤖 AI &amp; ML Enthusiast | 💻 Frontend Developer | 🐍 Python Programmer | 🧠 DSA | 🌐 Web Dev | 🚀 Hackathon Participant | Member of IETE Students Forum &amp; Google Developer Groups (IEM)
         </p>
-
         <p style="font-size:.95rem;line-height:1.85;color:var(--muted);" class="reveal" data-d="3">
           Based in <span style="color:var(--em);font-weight:600;">Kolkata, India</span> — exploring architectures of tomorrow, creating systems that are contextually intelligent and emotionally aware.
         </p>
-
         <div class="about-sub reveal grid grid-cols-1 sm:grid-cols-2 gap-6" data-d="4">
-
           <div>
-            <div style="font-family:'Syne',sans-serif;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--p);margin-bottom:6px;">
-              Philosophy
-            </div>
-            <p style="font-size:.9rem;color:var(--muted);">
-              Efficiency over complexity. AI as a tool for human empowerment.
-            </p>
+            <div style="font-family:'Syne',sans-serif;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--p);margin-bottom:6px;">Philosophy</div>
+            <p style="font-size:.9rem;color:var(--muted);">Efficiency over complexity. AI as a tool for human empowerment.</p>
           </div>
-
           <div>
-            <div style="font-family:'Syne',sans-serif;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--em);margin-bottom:6px;">
-              Mission
-            </div>
-            <p style="font-size:.9rem;color:var(--muted);">
-              Democratizing AI through accessible and scalable applications.
-            </p>
+            <div style="font-family:'Syne',sans-serif;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--em);margin-bottom:6px;">Mission</div>
+            <p style="font-size:.9rem;color:var(--muted);">Democratizing AI through accessible and scalable applications.</p>
           </div>
-
         </div>
-
       </div>
-
     </div>
   </div>
 </section>
-
 
 <!-- ══ SKILLS ══ -->
 <section class="sec" id="skills"><div class="con">
@@ -938,6 +867,8 @@ button{font-family:inherit;cursor:pointer}
     <p style="color:var(--muted);font-size:.87rem;max-width:240px;text-align:right;">AI-driven solutions &amp; technical experiments.</p>
   </div>
   <div class="pj-g">
+
+    <!-- EXISTING CARDS -->
     <div class="pj-card reveal" data-d="1">
       <div class="pj-img"><img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80" alt="" loading="lazy"/>
       <div class="pj-badge" style="background:rgba(0,200,150,.14);border:1px solid rgba(0,200,150,.3);color:#00C896;">Computer Vision</div></div>
@@ -945,13 +876,15 @@ button{font-family:inherit;cursor:pointer}
       <div class="tags"><span class="tag">TensorFlow</span><span class="tag">Keras</span><span class="tag">Python</span></div>
       <a href="https://github.com/TECH-SUGATA/AI-plant-Therapist-and-Health-monitoring-System" target="_blank" class="pj-l" style="color:#00C896;">View Repo <span class="mi" style="font-size:.85em;">open_in_new</span></a></div>
     </div>
+
     <div class="pj-card reveal" data-d="2">
       <div class="pj-img"><img src="https://images.openai.com/static-rsc-4/O3AdrqptD4HVMYrzMbC4-ddh4YaLJe6n3lperxqbksopP5u06gGFnLWgeM8eYnNDvyE4vCZ-qEz27BLrvqxNBNkexOp2S_NQ38jQ8CSnrHlpY75P-YOB_DIeGiL8nljT5hAjvtrgbzPXoAC9djwkNUUP_O2niA-cBPwTykukrykN8sQxyqlkrYrulwNUpL5Q?purpose=fullsize" alt="" loading="lazy"/>
       <div class="pj-badge" style="background:rgba(10,132,255,.14);border:1px solid rgba(10,132,255,.3);color:#38BDF8;">Sentiment AI</div></div>
       <div class="pj-body"><div class="pj-title">Emotionally Aware Machine</div><p class="pj-desc">Real-time facial expression and speech sentiment analysis using neural architectures and NLP.</p>
       <div class="tags"><span class="tag">NLP</span><span class="tag">OpenCV</span><span class="tag">PyTorch</span></div>
-      <a href=" https://github.com/TECH-SUGATA/Emotional-Aare-Machine-EAM-" target="_blank" class="pj-l" style="color:#38BDF8;">View Repo <span class="mi" style="font-size:.85em;">open_in_new</span></a></div>
+      <a href="https://github.com/TECH-SUGATA/Emotional-Aare-Machine-EAM-" target="_blank" class="pj-l" style="color:#38BDF8;">View Repo <span class="mi" style="font-size:.85em;">open_in_new</span></a></div>
     </div>
+
     <div class="pj-card reveal" data-d="3">
       <div class="pj-img"><img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80" alt="" loading="lazy"/>
       <div class="pj-badge" style="background:rgba(255,176,32,.14);border:1px solid rgba(255,176,32,.3);color:#FFB020;">EdTech AI</div></div>
@@ -959,6 +892,7 @@ button{font-family:inherit;cursor:pointer}
       <div class="tags"><span class="tag">React</span><span class="tag">Flask</span><span class="tag">OpenAI API</span></div>
       <a href="https://github.com/Souvagya06/studybuddy-ai" target="_blank" class="pj-l" style="color:#FFB020;">View Repo <span class="mi" style="font-size:.85em;">open_in_new</span></a></div>
     </div>
+
     <div class="pj-card reveal" data-d="1">
       <div class="pj-img"><img src="https://images.openai.com/static-rsc-4/TaPX5NCu-jYZBZE7TPLOhlUcRbqTh5l1ijNT9J0mHQsl7ikXHhxc9oq5dyOjtFNeSWlA1O7ISe1G_I5Sq1GQUc98aP0weNz7vXbq6Kto4faF_Dn3r28D6xkFxVCc4ySrrTVQhA1vgQ4NSLPaqd2aTT9MNhnPgMLJ2_TSjoQ_4Mg?purpose=inline" alt="" loading="lazy"/>
       <div class="pj-badge" style="background:rgba(255,107,138,.14);border:1px solid rgba(255,107,138,.3);color:#FF6B8A;">Disaster Mgmt</div></div>
@@ -966,6 +900,7 @@ button{font-family:inherit;cursor:pointer}
       <div class="tags"><span class="tag">Node.js</span><span class="tag">GCP</span><span class="tag">PostgreSQL</span></div>
       <a href="https://github.com/Bikram-pal/crisis-connect-ai" target="_blank" class="pj-l" style="color:#FF6B8A;">View Repo <span class="mi" style="font-size:.85em;">open_in_new</span></a></div>
     </div>
+
     <div class="pj-card reveal" data-d="2">
       <div class="pj-img"><img src="https://images.unsplash.com/photo-1633265486064-086b219458ec?w=600&q=80" alt="" loading="lazy"/>
       <div class="pj-badge" style="background:rgba(10,132,255,.14);border:1px solid rgba(10,132,255,.3);color:#0A84FF;">IoT &amp; Security</div></div>
@@ -973,30 +908,96 @@ button{font-family:inherit;cursor:pointer}
       <div class="tags"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">Arduino</span></div>
       <a href="https://github.com/Souvagya06/smart-rfid-attendance-system" target="_blank" class="pj-l" style="color:#0A84FF;">View Repo <span class="mi" style="font-size:.85em;">open_in_new</span></a></div>
     </div>
+
     <div class="pj-card reveal" data-d="3">
       <div class="pj-img"><img src="https://images.openai.com/static-rsc-4/GfgRbkonexjPKLBROsmcH0TjrW5VsL4loC0HUk0_PQNxctYC0rg03YyZleiDJrO7rO1nV6dgbpQHzFT_9YxPwfCnmEOlRYoZYJWdVgNjfDwgkDdpEXsKOmZ25Myydhk7p3QjDD6S7vHzk9Hszwzt4LXE6QGyCRwl79nbcdLTFbH4k54hZE7gONBB8NaRrMsn?purpose=fullsize" alt="" loading="lazy"/>
       <div class="pj-badge" style="background:rgba(0,200,150,.14);border:1px solid rgba(0,200,150,.3);color:#00C896;">Healthcare AI</div></div>
       <div class="pj-body"><div class="pj-title">MediFind AI</div><p class="pj-desc">Intelligent hospital finder during emergencies using ML, NLP &amp; real-time crowd data.</p>
       <div class="tags"><span class="tag">Python</span><span class="tag">Node.js</span><span class="tag">PostgreSQL</span></div>
       <a href="https://github.com/shounak2006/Hospital-Management-Arogya-" target="_blank" class="pj-l" style="color:#00C896;">View Repo <span class="mi" style="font-size:.85em;">open_in_new</span></a></div>
-    </div> 
-<div class="pj-card reveal" data-d="3">
-  <div class="pj-img"><img src="https://images.openai.com/static-rsc-4/ZfXsWJ8KF12K_MYkdenchZiHu5bw1qyMCDiTEPFNHemIpxzORUNPAkWIcLJ5Pk7ExvoWp_B8zc5O9ozsBnFzy3phSuLzaEY9sMCSn2GqwPZKFNf0n1Tp0PpGvTJCFgv2VpJMbr-mkuRAOZMxj-TVLIm8TQYqS3zDsbyzVN_KTsOQtLrBZ2iohCeZos_h_Q29?purpose=inline" loading="lazy"/>
-  <div class="pj-badge" style="background:rgba(0,150,255,.14);border:1px solid rgba(0,150,255,.3);color:#0096FF;">Weather Intelligence</div></div>
-  <div class="pj-body"><div class="pj-title">Nimbus Weather App</div><p class="pj-desc">Modern weather intelligence platform providing real-time updates, AQI insights, and 5-day forecasts with a clean glassmorphism UI.</p>
-  <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">API</span></div>
-  <a href="https://github.com/TECH-SUGATA/WEATHER-APP" target="_blank" class="pj-l" style="color:#0096FF;">View  Repo <span class="mi" style="font-size:.85em;">open_in_new</span></a></div>
-</div>
+    </div>
+
+    <div class="pj-card reveal" data-d="3">
+      <div class="pj-img"><img src="https://images.openai.com/static-rsc-4/ZfXsWJ8KF12K_MYkdenchZiHu5bw1qyMCDiTEPFNHemIpxzORUNPAkWIcLJ5Pk7ExvoWp_B8zc5O9ozsBnFzy3phSuLzaEY9sMCSn2GqwPZKFNf0n1Tp0PpGvTJCFgv2VpJMbr-mkuRAOZMxj-TVLIm8TQYqS3zDsbyzVN_KTsOQtLrBZ2iohCeZos_h_Q29?purpose=inline" loading="lazy"/>
+      <div class="pj-badge" style="background:rgba(0,150,255,.14);border:1px solid rgba(0,150,255,.3);color:#0096FF;">Weather Intelligence</div></div>
+      <div class="pj-body"><div class="pj-title">Nimbus Weather App</div><p class="pj-desc">Modern weather intelligence platform providing real-time updates, AQI insights, and 5-day forecasts with a clean glassmorphism UI.</p>
+      <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">API</span></div>
+      <a href="https://github.com/TECH-SUGATA/WEATHER-APP" target="_blank" class="pj-l" style="color:#0096FF;">View Repo <span class="mi" style="font-size:.85em;">open_in_new</span></a></div>
+    </div>
+
     <div class="pj-card reveal" data-d="2">
       <div class="pj-img"><img src="https://images.openai.com/static-rsc-4/oz9avab8xP5wrdKdIa48l_G1clakhnFamQQswFXCXkEhokMSE1adsPy6k7kL9uyw6RGANRRfgSUUabE2yy5uZ5RTq2TxlRNznhC79Rp3c93vdzvAslrIzyxKP11FJWMIlw7OblvFJM2Ke-9MtPWPxGsPhZ4w_wa6sGLlL3ntWRFXCQ-6za8_8kdEOZkLPBDR?purpose=fullsize" alt="" loading="lazy"/>
-      <div class="pj-badge" style="background:rgba(255,176,32,.14);border:1px solid rgba(255,176,32,.3);color:#FFB020;">Smart Food Ordering Cart In Resturent </div></div>
+      <div class="pj-badge" style="background:rgba(255,176,32,.14);border:1px solid rgba(255,176,32,.3);color:#FFB020;">Smart Food Ordering</div></div>
       <div class="pj-body"><div class="pj-title">VelvetBites</div><p class="pj-desc">Responsive food ordering web application featuring an interactive cart system for seamless user experience.</p>
       <div class="tags"><span class="tag">Tailwind</span><span class="tag">JavaScript</span><span class="tag">Firebase / Node.js</span></div>
       <a href="https://github.com/TECH-SUGATA/VelvetBites-Restaurant-" target="_blank" class="pj-l" style="color:#FFB020;">View Repo <span class="mi" style="font-size:.85em;">open_in_new</span></a></div>
     </div>
+
+    <!-- ══════════════════════════════
+         NEW PROJECT 01 — Live Stock Market Dashboard
+    ══════════════════════════════ -->
+    <div class="pj-card premium reveal" data-d="1">
+      <div class="pj-img">
+        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80" alt="Live Stock Market Dashboard" loading="lazy"/>
+        <div class="pj-badge" style="background:rgba(10,132,255,.18);border:1px solid rgba(10,132,255,.45);color:#38BDF8;text-shadow:0 0 12px rgba(56,189,248,.5);">Financial Intelligence</div>
+      </div>
+      <div class="pj-body">
+        <div class="pj-title" style="background:linear-gradient(90deg,#38BDF8,#0A84FF);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">Live Stock Market Dashboard</div>
+        <p class="pj-desc">Enterprise-grade financial analytics platform delivering real-time stock data, candlestick charts, portfolio monitoring, technical indicators, and market intelligence with a Bloomberg-terminal aesthetic.</p>
+        <div class="tags">
+          <span class="tag" style="background:rgba(56,189,248,.1);color:#38BDF8;border:1px solid rgba(56,189,248,.18);">React.js</span>
+          <span class="tag" style="background:rgba(56,189,248,.1);color:#38BDF8;border:1px solid rgba(56,189,248,.18);">Chart.js</span>
+          <span class="tag" style="background:rgba(56,189,248,.1);color:#38BDF8;border:1px solid rgba(56,189,248,.18);">REST APIs</span>
+          <span class="tag" style="background:rgba(56,189,248,.1);color:#38BDF8;border:1px solid rgba(56,189,248,.18);">JavaScript</span>
+        </div>
+        <a href="https://github.com/TECH-SUGATA/live-stock-market-dashboard" target="_blank" class="pj-l" style="color:#38BDF8;margin-top:2px;">View Repo <span class="mi" style="font-size:.85em;">open_in_new</span></a>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════
+         NEW PROJECT 02 — Talentra Unbiased Hiring
+    ══════════════════════════════ -->
+    <div class="pj-card premium reveal" data-d="2">
+      <div class="pj-img">
+        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&q=80" alt="Talentra Unbiased Hiring" loading="lazy"/>
+        <div class="pj-badge" style="background:rgba(139,92,246,.18);border:1px solid rgba(139,92,246,.45);color:#a78bfa;text-shadow:0 0 12px rgba(167,139,250,.5);">AI Talent Acquisition</div>
+      </div>
+      <div class="pj-body">
+        <div class="pj-title" style="background:linear-gradient(90deg,#a78bfa,#7c3aed);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">Talentra Unbiased Hiring</div>
+        <p class="pj-desc">Advanced AI recruitment platform engineered to eliminate hiring bias through anonymized candidate evaluation, intelligent skill assessments, predictive talent analytics, and transparent workflows.</p>
+        <div class="tags">
+          <span class="tag" style="background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid rgba(139,92,246,.2);">Python</span>
+          <span class="tag" style="background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid rgba(139,92,246,.2);">Flask</span>
+          <span class="tag" style="background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid rgba(139,92,246,.2);">Machine Learning</span>
+          <span class="tag" style="background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid rgba(139,92,246,.2);">PostgreSQL</span>
+        </div>
+        <a href="https://github.com/Souvagya06/talentra-unbiased-hiring" target="_blank" class="pj-l" style="color:#a78bfa;margin-top:2px;">View Repo <span class="mi" style="font-size:.85em;">open_in_new</span></a>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════
+         NEW PROJECT 03 — SpaceAetherOS
+    ══════════════════════════════ -->
+    <div class="pj-card premium reveal" data-d="3">
+      <div class="pj-img">
+        <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=600&q=80" alt="SpaceAetherOS" loading="lazy"/>
+        <div class="pj-badge" style="background:rgba(0,200,150,.14);border:1px solid rgba(0,200,150,.4);color:#00C896;text-shadow:0 0 12px rgba(0,200,150,.4);">Next-Gen OS</div>
+      </div>
+      <div class="pj-body">
+        <div class="pj-title" style="background:linear-gradient(90deg,#00C896,#38BDF8,#0A84FF);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">SpaceAetherOS</div>
+        <p class="pj-desc">A futuristic operating system inspired by deep-space exploration, featuring immersive holographic UI, advanced desktop architecture, mission-control displays, and next-generation digital experiences.</p>
+        <div class="tags">
+          <span class="tag" style="background:rgba(0,200,150,.1);color:#00C896;border:1px solid rgba(0,200,150,.2);">HTML</span>
+          <span class="tag" style="background:rgba(0,200,150,.1);color:#00C896;border:1px solid rgba(0,200,150,.2);">CSS</span>
+          <span class="tag" style="background:rgba(0,200,150,.1);color:#00C896;border:1px solid rgba(0,200,150,.2);">JavaScript</span>
+          <span class="tag" style="background:rgba(0,200,150,.1);color:#00C896;border:1px solid rgba(0,200,150,.2);">OS Concepts</span>
+        </div>
+        <a href="https://github.com/TECH-SUGATA/SpaceAetherOS" target="_blank" class="pj-l" style="color:#00C896;margin-top:2px;">View Repo <span class="mi" style="font-size:.85em;">open_in_new</span></a>
+      </div>
+    </div>
+
   </div>
-</div>
-</section>
+</div></section>
 
 <!-- ══ EXPERIENCE ══ -->
 <section class="sec" id="experience"><div class="con">
@@ -1053,21 +1054,16 @@ button{font-family:inherit;cursor:pointer}
   </div>
 </div></section>
 
-<!-- ══ CERTIFICATIONS — CARDS WITH COVER IMAGES ══ -->
+<!-- ══ CERTIFICATIONS ══ -->
 <section class="sec ct-bg" id="certifications"><div class="con">
   <div style="text-align:center;margin-bottom:0;" class="reveal">
     <span class="st">Credentials &amp; Achievements</span>
     <h2 class="sh">Verified <span class="gt2">Mastery </span></h2>
     <h2 class="sh">Industry <span class="gt2"> Certification </span></h2>
   </div>
-
   <div class="cert-cards-grid">
-
-    <!-- 1. Coursera / DeepLearning.AI -->
     <div class="cert-card reveal" style="--ca:rgba(0,86,210,.55);--ca-glow:rgba(0,86,210,.14);" data-d="1">
-      <div class="cert-cover">
-        <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&q=80" alt="AI Deep Learning"/>
-      </div>
+      <div class="cert-cover"><img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&q=80" alt=""/></div>
       <div class="cert-logo-row">
         <div class="cert-logo-wrap" style="background:rgba(0,86,210,.15);">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Coursera-Logo_600x600.svg/600px-Coursera-Logo_600x600.svg.png" alt="Coursera"/>
@@ -1080,12 +1076,8 @@ button{font-family:inherit;cursor:pointer}
         <span class="cert-badge" style="background:rgba(0,86,210,.1);border-color:rgba(0,86,210,.35);color:#38BDF8;">Neural Networks · CNN · NLP</span>
       </div>
     </div>
-
-    <!-- 2. AWS -->
     <div class="cert-card reveal" style="--ca:rgba(255,153,0,.55);--ca-glow:rgba(255,153,0,.12);" data-d="2">
-      <div class="cert-cover">
-        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80" alt="Cloud AWS"/>
-      </div>
+      <div class="cert-cover"><img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80" alt=""/></div>
       <div class="cert-logo-row">
         <div class="cert-logo-wrap" style="background:rgba(255,153,0,.12);">
           <img src="https://images.openai.com/static-rsc-4/9GwLdhAfgUjdsu2NP1E5HH6zssL91Wg0an7IlTFmCtJLmY9TXRGTUtgzjq2cQ_zMRKeE3gZsqHMwU5M7uDVpnejXLaLN4kygUFSdvYoviZscdFutQmGOrDohwU8-VQIRtxM249YoytqbxjTSICqaV6zEYsPfdkAST9kdbbb3EzQ?purpose=inline" alt="AWS"/>
@@ -1098,12 +1090,8 @@ button{font-family:inherit;cursor:pointer}
         <span class="cert-badge" style="background:rgba(255,153,0,.1);border-color:rgba(255,153,0,.35);color:#FFB020;">EC2 · S3 · Lambda · VPC</span>
       </div>
     </div>
-
-    <!-- 3. IBM -->
     <div class="cert-card reveal" style="--ca:rgba(0,63,160,.55);--ca-glow:rgba(0,63,160,.12);" data-d="3">
-      <div class="cert-cover">
-        <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&q=80" alt="IBM AI Engineering"/>
-      </div>
+      <div class="cert-cover"><img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&q=80" alt=""/></div>
       <div class="cert-logo-row">
         <div class="cert-logo-wrap" style="background:rgba(0,63,160,.12);">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/1200px-IBM_logo.svg.png" alt="IBM"/>
@@ -1116,12 +1104,8 @@ button{font-family:inherit;cursor:pointer}
         <span class="cert-badge" style="background:rgba(0,63,160,.1);border-color:rgba(0,63,160,.35);color:#38BDF8;">Watson AI · MLOps · NLP</span>
       </div>
     </div>
-
-    <!-- 4. Google -->
     <div class="cert-card reveal" style="--ca:rgba(52,168,83,.55);--ca-glow:rgba(52,168,83,.12);" data-d="1">
-      <div class="cert-cover">
-        <img src="https://images.openai.com/static-rsc-4/QMVZghjWtdgnn863_sxBA16-AST1lrl4rBmjJvd-Ex-sLL6bOydOzwy_RZdMiedV9mSqEjkneWSPseRJgdY7_48KGBNPYS7uFigbbgEeBUUNbYGN7ncs6g9GKGUzO3cKVLEPrO8q8kjP5ABVi6GX2WUZft2gpJdn9VLX3oNAVmY?purpose=inline" alt="Google Developer Groups"/>
-      </div>
+      <div class="cert-cover"><img src="https://images.openai.com/static-rsc-4/QMVZghjWtdgnn863_sxBA16-AST1lrl4rBmjJvd-Ex-sLL6bOydOzwy_RZdMiedV9mSqEjkneWSPseRJgdY7_48KGBNPYS7uFigbbgEeBUUNbYGN7ncs6g9GKGUzO3cKVLEPrO8q8kjP5ABVi6GX2WUZft2gpJdn9VLX3oNAVmY?purpose=inline" alt=""/></div>
       <div class="cert-logo-row">
         <div class="cert-logo-wrap" style="background:rgba(66,133,244,.1);">
           <img src="https://images.openai.com/static-rsc-4/glKgusYcmB1PlmrashB1aEhSFOonuyg83MiTawrYgvMUG_vYbV4KehIeR3oNDjFZUw9PNOaZ-cA8v1Ap4HkiihaecFDpgpMM924pybry-tFUZJetF-vLaBnLLNlOfApEsLX2eDgDdW1DHFLjOIqnp9nPegqhWN1ofbOKipO7VFU?purpose=inline" alt="Google"/>
@@ -1134,12 +1118,8 @@ button{font-family:inherit;cursor:pointer}
         <span class="cert-badge" style="background:rgba(52,168,83,.1);border-color:rgba(52,168,83,.35);color:#00C896;">GCP · Firebase · Flutter</span>
       </div>
     </div>
-
-    <!-- 5. MATLAB -->
     <div class="cert-card reveal" style="--ca:rgba(227,114,34,.55);--ca-glow:rgba(227,114,34,.12);" data-d="2">
-      <div class="cert-cover">
-        <img src="https://images.openai.com/static-rsc-4/1umDz9Y0MAxkY0mRk9NgZ2ZxraIb38W-TvNCf-xOGVJp2oUPRVwWOdCl1ojmebnji2Z8n2wBOzCCtUJQoZNJH3GWp2cgj85O_0CJawADKMyVDdU9Jm-EKnP-04feWej0VJKkUtNvw02N0QFXGzKpdzF-s_ELM4jYq_wv-Hos8MirAhVr8Jh9g79wHXjMEyd3?purpose=fullsize" alt="MATLAB Workshop"/>
-      </div>
+      <div class="cert-cover"><img src="https://images.openai.com/static-rsc-4/1umDz9Y0MAxkY0mRk9NgZ2ZxraIb38W-TvNCf-xOGVJp2oUPRVwWOdCl1ojmebnji2Z8n2wBOzCCtUJQoZNJH3GWp2cgj85O_0CJawADKMyVDdU9Jm-EKnP-04feWej0VJKkUtNvw02N0QFXGzKpdzF-s_ELM4jYq_wv-Hos8MirAhVr8Jh9g79wHXjMEyd3?purpose=fullsize" alt=""/></div>
       <div class="cert-logo-row">
         <div class="cert-logo-wrap" style="background:rgba(227,114,34,.12);">
           <img src="https://images.openai.com/static-rsc-4/KRhkDUx4KiLmkH9Y5gqGWm_8F6Vf-MYchOXBclQBd4Aa_Ecgl0pLGSIoBlFFAKfJQ3hZzokcFRwj-SvE84rVPRFey3CruKqa8g6JyasRK_zTAs99G4kz_SgQ0kZPpOYffD5UtQqeh4gXERFIQFUDpWGFYa3-Z0L85LqyQ5qUfRXYmk2m4PQUGrcZ1iJtqQTZ?purpose=fullsize" alt="MATLAB"/>
@@ -1152,12 +1132,8 @@ button{font-family:inherit;cursor:pointer}
         <span class="cert-badge" style="background:rgba(227,114,34,.1);border-color:rgba(227,114,34,.35);color:#FFB020;">Signal Processing · CV · DIP</span>
       </div>
     </div>
-
-    <!-- 6. IETE -->
     <div class="cert-card reveal" style="--ca:rgba(255,107,138,.55);--ca-glow:rgba(255,107,138,.12);" data-d="3">
-      <div class="cert-cover">
-        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80" alt="Electronics Engineering"/>
-      </div>
+      <div class="cert-cover"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80" alt=""/></div>
       <div class="cert-logo-row">
         <div class="cert-logo-wrap" style="background:rgba(255,107,138,.1);">
           <img src="https://images.openai.com/static-rsc-4/GZVIUxnhc5VmKrEtvjO7z4j4FlG82ftkffBxxh1S7jsf7gnwXSOMkycIsfCgnJQV5hyQHgEsPt2A_qUp9ljS3noX1JiOO0huFW71pLIV0zJPQgBUI4sNNdcOr3afUDxW9llKZFBCJCvz3ZqnLY6EBmtX8MVjOgCE6AzC72aEStM?purpose=inline" alt="IETE"/>
@@ -1170,19 +1146,16 @@ button{font-family:inherit;cursor:pointer}
         <span class="cert-badge" style="background:rgba(255,107,138,.1);border-color:rgba(255,107,138,.35);color:#FF6B8A;">Electronics · Telecom · IoT</span>
       </div>
     </div>
-
-  </div><!-- /cert-cards-grid -->
-
-  <!-- Hackathons -->
+  </div>
   <div class="hack-section reveal">
     <div class="hack-section-title">Competitive Edge &amp; Hackathons</div>
     <div class="hk-g">
       <div class="hk reveal" data-d="1"><div class="hk-t" style="color:var(--ic);">SIH 2025</div><div class="hk-s">Smart India Hackathon Participant</div></div>
       <div class="hk reveal" data-d="2"><div class="hk-t" style="color:var(--ic);">UNSTOP</div><div class="hk-s">Hackathon Participant</div></div>
       <div class="hk reveal" data-d="3" style="border-color:rgba(255,176,32,.3);"><div class="hk-t" style="color:var(--gd);">IIT Guwahati</div><div class="hk-s">En-coder 2026 Participants🏆</div></div>
-      <div class="hk reveal" data-d="4"><div class="hk-t" style="color:var(--em);font-size:.9rem;">Double Slash 4.0</div><div class="hk-s">Jadavpur IEEE GFG</div></div>
-      <div class="hk reveal" data-d="5"><div class="hk-t" style="color:var(--em);">LeetCode</div><div class="hk-s"> Problems Solving</div></div>
-      <div class="hk reveal" data-d="5"><div class="hk-t" style="color:var(--em);">GeeksForGeeks</div><div class="hk-s">problems Solving </div></div>
+      <div class="hk reveal" data-d="4"><div class="hk-t" style="color:var(--em);">Double Slash 4.0</div><div class="hk-s">Jadavpur IEEE GFG</div></div>
+      <div class="hk reveal" data-d="5"><div class="hk-t" style="color:var(--em);">LeetCode</div><div class="hk-s">Problems Solving</div></div>
+      <div class="hk reveal" data-d="5"><div class="hk-t" style="color:var(--em);">GeeksForGeeks</div><div class="hk-s">Problems Solving</div></div>
       <div class="hk reveal" data-d="5"><div class="hk-t" style="color:var(--ic);">HackerRank</div><div class="hk-s">5★ Problems Solving</div></div>
     </div>
   </div>
@@ -1197,7 +1170,7 @@ button{font-family:inherit;cursor:pointer}
   <div class="bl-g">
     <div class="bl-card reveal" data-d="1">
       <div class="bl-img"><img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&q=80" alt="" loading="lazy"/></div>
-      <div class="bl-b"><div class="bl-cat" style="color:var(--p);">Machine Learning</div><div class="bl-title"> Generative AI  Matermind</div><p class="bl-ex">Exploring how transformer architectures reshape the boundaries of human creativity and automated content generation.</p><a href="#" class="bl-more" style="color:var(--p);">Read More <span class="mi" style="font-size:.9em;">arrow_forward</span></a></div>
+      <div class="bl-b"><div class="bl-cat" style="color:var(--p);">Machine Learning</div><div class="bl-title">Generative AI Mastermind</div><p class="bl-ex">Exploring how transformer architectures reshape the boundaries of human creativity and automated content generation.</p><a href="#" class="bl-more" style="color:var(--p);">Read More <span class="mi" style="font-size:.9em;">arrow_forward</span></a></div>
     </div>
     <div class="bl-card reveal" data-d="2">
       <div class="bl-img"><img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&q=80" alt="" loading="lazy"/></div>
@@ -1235,12 +1208,10 @@ button{font-family:inherit;cursor:pointer}
       <div class="cm-ic" style="background:rgba(255,255,255,.07);"><img src="https://img.icons8.com/ios11/512/FFFFFF/github.png" alt="" style="opacity:.85;"/></div>
       <div class="cm-l">GitHub</div><div class="cm-v">TECH-SUGATA</div>
     </a>
-
-      <a href="https://g.dev/devsugata" target="_blank" class="cm" style="--hc:rgba(55, 182, 182, 0.597);--hg:rgba(255,255,255,.05);">
+    <a href="https://g.dev/devsugata" target="_blank" class="cm" style="--hc:rgba(55,182,182,.597);--hg:rgba(255,255,255,.05);">
       <div class="cm-ic" style="background:rgba(255,255,255,.07);"><img src="https://images.openai.com/static-rsc-4/Z6qdC_4z8Mquf65hl0223Z9bkAVKY-zRKAVlh6MesRUWPLNYkLb01Yahf6aO696oE9NKBIp9zcl0F8vTYpyIt181lMjgxYASu6KcVaHxZPxBomYQSS1WPq3U9rzDRl-o5FgB9bQZUFnYS75frB-caW2wNFgBBXA-HX5A4wYpSzU?purpose=inline" alt="" style="opacity:.85;"/></div>
       <div class="cm-l">Google Developer Groups</div><div class="cm-v">Sugata Nayak</div>
     </a>
-
     <a href="https://www.instagram.com/nayak_sugata" target="_blank" class="cm" style="--hc:rgba(228,64,95,.5);--hg:rgba(228,64,95,.1);">
       <div class="cm-ic" style="background:rgba(228,64,95,.1);"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt=""/></div>
       <div class="cm-l">Instagram</div><div class="cm-v">@nayak_sugata</div>
@@ -1286,13 +1257,11 @@ button{font-family:inherit;cursor:pointer}
   </div>
 </div></div></footer>
 
-<!-- WhatsApp FAB -->
 <a href="https://wa.me/919883131330" target="_blank" class="wa" aria-label="Chat on WhatsApp">
   <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
 </a>
 
 <script>
-/* ══ CANVAS ══ */
 (function(){
   const cv=document.getElementById('bgCanvas'),cx=cv.getContext('2d');
   let W,H,pts=[];
@@ -1328,20 +1297,17 @@ button{font-family:inherit;cursor:pointer}
   draw();
 })();
 
-/* ══ CUSTOM CURSOR ══ */
 const curEl=document.getElementById('cur');
 document.addEventListener('mousemove',e=>{
   curEl.style.left=e.clientX+'px';
   curEl.style.top=e.clientY+'px';
 },{passive:true});
 
-/* ══ SCROLL REVEAL ══ */
 const ro=new IntersectionObserver(entries=>{
   entries.forEach(x=>{if(x.isIntersecting)x.target.classList.add('in');});
 },{threshold:.08});
 document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
 
-/* ══ HAMBURGER ══ */
 const hb=document.getElementById('hb'),dr=document.getElementById('dr');
 hb.addEventListener('click',()=>{
   const o=dr.classList.toggle('open');
@@ -1351,7 +1317,6 @@ dr.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
   dr.classList.remove('open');hb.classList.remove('open');
 }));
 
-/* ══ TICKER ══ */
 (function(){
   const w=document.getElementById('ticker'),items=w.querySelectorAll('.tick-item');
   let cur=0;
@@ -1368,7 +1333,6 @@ dr.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
   setInterval(next,HOLD);
 })();
 
-/* ══ FORM ══ */
 function sf(btn){
   btn.textContent='✅ Message Sent!';
   btn.classList.add('sent');
