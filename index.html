@@ -39,6 +39,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--nav);backdro
 @media(max-width:360px){.ib.m{display:none}}
 .hero{min-height:100svh;display:flex;align-items:center;padding:96px 0 40px}
 .hg{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center;width:100%}
+.hg>*{min-width:0;max-width:100%}
 .av{display:inline-flex;align-items:center;gap:8px;padding:7px 15px;border-radius:99px;border:1px solid rgba(52,211,153,.35);background:rgba(52,211,153,.07);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--em)}
 .av i{width:7px;height:7px;border-radius:50%;background:var(--em);animation:pl 2s infinite}@keyframes pl{0%{box-shadow:0 0 0 0 rgba(52,211,153,.6)}100%{box-shadow:0 0 0 9px transparent}}
 .hi{font-size:clamp(1.6rem,3vw,2.3rem);color:var(--mu);margin:22px 0 0;font-weight:500}
@@ -46,10 +47,14 @@ h1{font-size:clamp(2.6rem,6.4vw,5rem);line-height:1.05;letter-spacing:-.035em;fo
 .tk{height:44px;font-weight:700;font-size:clamp(1.15rem,2.5vw,1.7rem);color:var(--em);margin:10px 0}.tk span:after{content:'▍';margin-left:2px;animation:bl 1s infinite}@keyframes bl{50%{opacity:0}}
 .hp{color:var(--mu);max-width:520px;margin-bottom:24px}
 .row{display:flex;flex-wrap:wrap;gap:12px}
-.amb{display:flex;align-items:center;gap:12px;margin-top:22px;padding:10px 16px 10px 10px;width:fit-content;max-width:100%;border-radius:14px;border:1px solid rgba(251,191,36,.4);background:linear-gradient(120deg,rgba(251,191,36,.1),rgba(59,130,246,.08))}
+.amb{display:flex;align-items:center;gap:12px;margin-top:22px;padding:10px 16px 10px 10px;width:fit-content;max-width:100%;border-radius:14px;border:1px solid rgba(251,191,36,.4);background:linear-gradient(120deg,rgba(251,191,36,.1),rgba(59,130,246,.08));box-sizing:border-box}
+.amb>div{min-width:0;overflow-wrap:break-word}
+.amb small{white-space:normal;overflow-wrap:break-word;display:block}
+.amb .av2{flex-shrink:0}
 .amb b{display:block;font-size:.85rem}.amb small{color:var(--mu);font-size:.7rem}
 .av2{width:44px;height:44px;border-radius:50%;background:var(--ph) center 12%/cover;border:2px solid var(--gd);flex-shrink:0}
-.stats{display:flex;flex-wrap:wrap;gap:26px;margin-top:26px;padding-top:18px;border-top:1px solid var(--bd)}
+.stats{display:flex;flex-wrap:wrap;gap:26px;margin-top:26px;padding-top:18px;border-top:1px solid var(--bd);max-width:100%}
+.stats>div{min-width:0}
 .stats b{font-size:1.6rem;display:block;line-height:1.2}.stats small{color:var(--mu);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase}
 .soc{display:flex;gap:10px;margin-top:22px}.soc a{padding:8px 14px;border-radius:9px;border:1px solid var(--bd);background:var(--card);font-size:.72rem;font-weight:600;transition:.3s}.soc a:hover{border-color:var(--em);transform:translateY(-3px)}
 /* photo module */
@@ -60,6 +65,7 @@ h1{font-size:clamp(2.6rem,6.4vw,5rem);line-height:1.05;letter-spacing:-.035em;fo
 .r2{width:56%;aspect-ratio:1;border:1px dashed rgba(56,189,248,.35);animation:rot 28s linear infinite reverse}
 @keyframes rot{to{transform:translate(-50%,-50%) rotate(360deg)}}
 .specGrid{position:relative;z-index:1;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;width:100%}
+.specGrid>*{min-width:0}
 .specCol{display:flex;flex-direction:column;gap:10px}
 .specCol.left{align-items:flex-end;text-align:right}
 .specCol.right{align-items:flex-start;text-align:left}
@@ -91,9 +97,9 @@ h1{font-size:clamp(2.6rem,6.4vw,5rem);line-height:1.05;letter-spacing:-.035em;fo
 @media(max-width:760px){.specGrid{grid-template-columns:1fr}.pf{order:-1;margin:0 auto 6px}.specCol{flex-direction:row;flex-wrap:wrap;justify-content:center!important;align-items:center!important;text-align:center!important;gap:8px}}
 @media(max-width:940px){.hg{grid-template-columns:1fr;text-align:center}.hp{margin-inline:auto}.row,.stats,.soc{justify-content:center}.amb{margin-inline:auto;text-align:left}.pm{order:-1}}
 /* cards */
-.grid{display:grid;gap:18px}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}.g5{grid-template-columns:repeat(5,1fr)}.g2c{grid-template-columns:repeat(2,1fr)}
-@media(max-width:1040px){.g3{grid-template-columns:repeat(2,1fr)}.g4,.g5{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:640px){.g3,.g2c{grid-template-columns:1fr}.g4,.g5{grid-template-columns:repeat(2,1fr)}}
+.grid{display:grid;gap:18px}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}.g5{grid-template-columns:repeat(5,1fr)}.g6{grid-template-columns:repeat(6,1fr)}.g2c{grid-template-columns:repeat(2,1fr)}
+@media(max-width:1040px){.g3{grid-template-columns:repeat(2,1fr)}.g4,.g5{grid-template-columns:repeat(3,1fr)}.g6{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:640px){.g3,.g2c{grid-template-columns:1fr}.g4,.g5,.g6{grid-template-columns:repeat(2,1fr)}}
 .card{background:var(--card);border:1px solid var(--bd);border-radius:16px;backdrop-filter:blur(18px);position:relative;overflow:hidden;transition:transform .18s,border-color .3s,box-shadow .3s;transform-style:preserve-3d}
 .card:hover{border-color:var(--a,var(--em));box-shadow:0 26px 54px rgba(0,0,0,.4),0 0 34px color-mix(in srgb,var(--a,#34d399) 22%,transparent)}
 .pd{padding:18px 20px 20px}
@@ -147,7 +153,7 @@ footer{padding:30px 0;border-top:1px solid var(--bd);text-align:center;color:var
 <div class="row"><a href="#projects" class="btn">Explore Work ↗</a><a href="#contact" class="btn o">Let's Connect</a></div>
 <div class="amb rv"><div class="av2"></div><div><b>Google Student Ambassador 2026</b><small>GID-10803 · Techfest IIT Bombay College Ambassador · GfG Campus Mantri</small></div></div>
 <div class="stats"><div><b data-n="12">0</b><small>Projects</small></div><div><b data-n="4">0</b><small>Internships</small></div><div><b data-n="10">0</b><small>Certifications</small></div><div><b data-n="13">0</b><small>Hackathons</small></div><div><b>#43</b><small>Techfest Rank</small></div></div>
-<div class="soc"><a href="https://github.com/TECH-SUGATA" target="_blank">GitHub</a><a href="https://www.linkedin.com/in/sugata-nayak-343099322" target="_blank">LinkedIn</a><a href="https://g.dev/devsugata" target="_blank">Google Dev</a><a href="https://wa.me/919883131330" target="_blank">WhatsApp</a></div></div>
+<div class="soc"><a href="https://github.com/TECH-SUGATA" target="_blank">GitHub</a><a href="https://www.linkedin.com/in/sugata-nayak-343099322" target="_blank">LinkedIn</a><a href="https://g.dev/devsugata" target="_blank">Google Dev</a><a href="https://leetcode.com/u/Sugata-Nayak/" target="_blank">LeetCode</a><a href="https://wa.me/919883131330" target="_blank">WhatsApp</a></div></div>
 <div class="pm" id="pm"><div class="blob"></div><div class="rg r1"></div><div class="rg r2"></div>
 <div class="specGrid">
   <div class="specCol left">
@@ -180,7 +186,7 @@ footer{padding:30px 0;border-top:1px solid var(--bd);text-align:center;color:var
 <section class="sec" id="notes"><div class="con"><div class="hd rv"><div><span class="st m">Intellectual stream</span><h2 class="sh">Field <span class="g2">Notes</span></h2></div><p>Engineering write-ups from things I've built.</p></div><div class="grid g3" id="bl"></div></div></section>
 
 <section class="sec" id="contact"><div class="con"><div class="hd rv"><div><span class="st m">Connect</span><h2 class="sh">Let's build something<br/><span class="gt">intelligent together.</span></h2></div></div>
-<div class="grid g5" id="cm" style="margin-bottom:34px"></div>
+<div class="grid g6" id="cm" style="margin-bottom:34px"></div>
 <div class="grid g2c"><div><span class="st m">Reach me at</span>
 <a class="card ci" href="mailto:sugatanayak65@gmail.com"><span>✉️</span><div><small>Email</small>sugatanayak65@gmail.com</div></a>
 <a class="card ci" href="tel:+919883131330"><span>📞</span><div><small>Phone</small>+91 98831 31330</div></a>
@@ -272,7 +278,7 @@ const C=[["Azure AI Apps & Agents Developer Associate","Microsoft Certified","#3
 $('#ct').innerHTML=C.map((c,i)=>`<div class="card cc tilt rv" style="--a:${c[2]}"><div class="cv">${cover(c[2],c[3],i+3,'c',PM(c[2])[c[6]])}</div><div class="ilogo">${c[1][0]}</div><div class="pd"><div class="iss m">${c[1]}</div><h3>${c[0]}</h3><div class="tags"><span>${c[5]}</span></div>${c[4]?`<a class="lk" target="_blank" href="${c[4]}">Verify credential ↗</a>`:`<span class="lk" style="opacity:.6">Earned 2025–2026</span>`}</div></div>`).join("");
 const B=[["Machine Learning","#34d399","🔊","How UrbanNoiseNet hears the city","Training a Random Forest on 8,732 UrbanSound8K clips with MFCC features, and turning a browser mic into a civic enforcement pipeline.","TECH-SUGATA/UrbanNoiseNet"],["Full Stack","#38bdf8","🛰️","Streaming space data with Socket.io","Unifying NASA, SpaceX and ISS feeds into one mission-control UI and layering a Gemini AI Oracle on top of live orbital data.","TECH-SUGATA/SpaceAetherOS"],["Team Project","#fbbf24","📚","Shipping StudyBuddy.AI with a 5-person team","Leading frontend/UX while wiring Google Classroom and LLaMA 3.3 70B into an active study coach.","Souvagya06/studybuddy-ai"]];
 $('#bl').innerHTML=B.map((b,i)=>`<div class="card tilt rv" style="--a:${b[1]}"><div class="cv">${cover(b[1],b[2],i+7,'b')}</div><div class="pd"><div class="st m" style="color:${b[1]}">${b[0]}</div><h3 style="color:var(--tx)">${b[3]}</h3><p>${b[4]}</p><a class="lk" target="_blank" href="https://github.com/${b[5]}" style="display:inline-block;margin-top:12px">Read more →</a></div></div>`).join("");
-$('#cm').innerHTML=[["Email","M","#ea4335","sugatanayak65@gmail.com","mailto:sugatanayak65@gmail.com"],["WhatsApp","W","#25d366","+91-9883131330","https://wa.me/919883131330"],["LinkedIn","in","#0a66c2","sugata-nayak","https://www.linkedin.com/in/sugata-nayak-343099322"],["GitHub","GH","#e6edf3","TECH-SUGATA","https://github.com/TECH-SUGATA"],["Google Dev","G","#fbbf24","devsugata","https://g.dev/devsugata"]].map(c=>`<a class="card cm tilt" style="--c:${c[2]}" target="_blank" href="${c[4]}"><i>${c[1]}</i><b>${c[0]}</b><small class="m">${c[3]}</small></a>`).join("");
+$('#cm').innerHTML=[["Email","M","#ea4335","sugatanayak65@gmail.com","mailto:sugatanayak65@gmail.com"],["WhatsApp","W","#25d366","+91-9883131330","https://wa.me/919883131330"],["LinkedIn","in","#0a66c2","sugata-nayak","https://www.linkedin.com/in/sugata-nayak-343099322"],["GitHub","GH","#e6edf3","TECH-SUGATA","https://github.com/TECH-SUGATA"],["Google Dev","G","#fbbf24","devsugata","https://g.dev/devsugata"],["LeetCode","LC","#ffa116","Sugata-Nayak","https://leetcode.com/u/Sugata-Nayak/"]].map(c=>`<a class="card cm tilt" style="--c:${c[2]}" target="_blank" href="${c[4]}"><i>${c[1]}</i><b>${c[0]}</b><small class="m">${c[3]}</small></a>`).join("");
 function tilt(){document.querySelectorAll('.tilt').forEach(c=>{c.onmousemove=e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`perspective(900px) rotateY(${x*9}deg) rotateX(${-y*9}deg) translateZ(6px)`};c.onmouseleave=()=>c.style.transform=''})}
 drawP("All");tilt();
 const pm=$('#pm');pm.onmousemove=e=>{const r=pm.getBoundingClientRect();$('#pf').style.transform=`rotateY(${((e.clientX-r.left)/r.width-.5)*16}deg) rotateX(${-((e.clientY-r.top)/r.height-.5)*12}deg)`};pm.onmouseleave=()=>$('#pf').style.transform='';
